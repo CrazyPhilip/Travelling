@@ -42,5 +42,10 @@ namespace Travelling.Views
             FlyoutHeader flyoutHeader = new FlyoutHeader();
             Navigation.PushModalAsync(flyoutHeader, false);
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

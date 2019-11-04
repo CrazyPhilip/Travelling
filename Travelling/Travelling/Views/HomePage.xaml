@@ -75,7 +75,7 @@
         <ScrollView>
             <StackLayout Orientation="Horizontal" Margin="10,0,0,0" Spacing="10">
                 <Button Style="{DynamicResource PageButton}"  Text="线路设计" BackgroundColor="#27bcad" TextColor="White"/>
-                <Button Style="{DynamicResource PageButton}" Text="游记手账"/>
+                <Button Style="{DynamicResource PageButton}" Text="游记手账" Clicked="Button_Clicked"/>
                 <Button Style="{DynamicResource PageButton}" Text="探店"/>
                 <Button Style="{DynamicResource PageButton}" Text="vlog"/>
             </StackLayout>

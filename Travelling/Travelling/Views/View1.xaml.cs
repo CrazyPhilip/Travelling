@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace Travelling.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NewPlanPage : TabbedPage
+    public partial class View1 : ContentView
     {
-        public NewPlanPage()
+        public View1()
         {
             InitializeComponent();
         }

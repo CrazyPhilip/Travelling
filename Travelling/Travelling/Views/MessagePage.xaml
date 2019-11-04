@@ -3,15 +3,201 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              mc:Ignorable="d"
              x:Class="Travelling.Views.MessagePage"
              Icon="message.png"
              Title="动态">
+    
+    <ContentPage.Resources>
+        <Style x:Key="AvatarStyle" TargetType="Frame">
+            <Setter Property="BorderColor" Value="Transparent"/>
+            <Setter Property="HeightRequest" Value="40"/>
+            <Setter Property="WidthRequest" Value="40"/>
+            <Setter Property="CornerRadius" Value="20"/>
+            <Setter Property="HorizontalOptions" Value="Start"/>
+            <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="IsClippedToBounds" Value="True"/>
+            <Setter Property="HasShadow" Value="False"/>
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+    </ContentPage.Resources>
+    
     <ContentPage.Content>
+        <ScrollView>
+            
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackLayout Orientation="Horizontal" HeightRequest="60" BackgroundColor="#a99e97">
+                <ff:CachedImage Source="menu_white.png" HorizontalOptions="Start" VerticalOptions="Center" Margin="20,0"/>
+                <Label Text="动态" TextColor="White" FontSize="Title" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+                <ff:CachedImage Source="search.png" HorizontalOptions="End" VerticalOptions="Center" Margin="20,0"/>
+            </StackLayout>
+
+            <!--第一个-->
+            <Grid HeightRequest="40" RowSpacing="0" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            
+                <Frame Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Style="{DynamicResource AvatarStyle}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <ff:CachedImage Source="a3.png"/>
+                </Frame>
+                
+                <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                    <Label Text="行走的小胖熊" TextColor="Black" FontSize="Large" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+                    <Label Text="23min" FontSize="Large" VerticalOptions="Center" HorizontalOptions="EndAndExpand"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                    <ff:CachedImage Source="position.png" HeightRequest="15" WidthRequest="15"/>
+                    <Label Text="灵芝，西藏" TextColor="#a99e97" VerticalOptions="Center"/>
+                </StackLayout>
+
+            </Grid>
+            <ff:CachedImage Source="huaxue.png" HorizontalOptions="Fill" HeightRequest="200" Aspect="AspectFill"/>
+
+            <Label Text="在冰川上面探险，邀你一起感受行走的力量！" TextColor="Black" FontSize="Large" Margin="10,0"/>
+            <Label Text="#徒步#西藏" TextColor="{StaticResource light_green}" FontSize="Large" Margin="10,0"/>
+
+            <StackLayout Orientation="Horizontal" Margin="10,0">
+                <Frame Style="{DynamicResource AvatarStyle}">
+                    <ff:CachedImage Source="a1.png"/>
+                </Frame>
+                <Frame Style="{DynamicResource AvatarStyle}">
+                    <ff:CachedImage Source="a2.png"/>
+                </Frame>
+                <Frame Style="{DynamicResource AvatarStyle}">
+                    <ff:CachedImage Source="a3.png"/>
+                </Frame>
+                <Frame Style="{DynamicResource AvatarStyle}">
+                    <ff:CachedImage Source="a4.png"/>
+                </Frame>
+                <Frame Style="{DynamicResource AvatarStyle}">
+                    <ff:CachedImage Source="a5.png"/>
+                </Frame>
+                <Frame HeightRequest="40" WidthRequest="80" Padding="0" CornerRadius="20" HasShadow="False" BackgroundColor="#4c4b52" VerticalOptions="CenterAndExpand">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <ff:CachedImage Source="like_white.png" HeightRequest="20" WidthRequest="20"/>
+                        <Label Text="+16" FontSize="Medium" TextColor="White" VerticalOptions="Center"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+                <BoxView Color="Black" HeightRequest="1" HorizontalOptions="FillAndExpand" Margin="10,20"/>
+
+                <!--第二个-->
+            <Grid HeightRequest="40" RowSpacing="0" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Frame Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Style="{DynamicResource AvatarStyle}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <ff:CachedImage Source="a1.png"/>
+                </Frame>
+
+                <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                    <Label Text="凯勒的蝴蝶结" TextColor="Black" FontSize="Large" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+                    <Label Text="42min" FontSize="Large" VerticalOptions="Center" HorizontalOptions="EndAndExpand"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                    <ff:CachedImage Source="position.png" HeightRequest="15" WidthRequest="15"/>
+                    <Label Text="西安，陕西" TextColor="#a99e97" VerticalOptions="Center"/>
+                </StackLayout>
+
+            </Grid>
+            <Label TextColor="Black" FontSize="Large" Margin="10,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="大唐不夜城！"/>
+                        <Span Text="#西安" TextColor="{StaticResource light_green}"/>
+                        <Span Text="，真的太漂亮了。感谢设计线路的@"/>
+                        <Span Text="山川" TextColor="{StaticResource light_green}"/>
+                        <Span Text="，点我的头像看我最新的分享~"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Frame HeightRequest="40" WidthRequest="150" Padding="0" CornerRadius="20" Margin="10,0" HasShadow="False" BackgroundColor="#4c4b52" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <ff:CachedImage Source="like_gray.png" HeightRequest="20" WidthRequest="20"/>
+                    <Label Text="Be first to like it" FontSize="Medium" TextColor="White" VerticalOptions="Center"/>
+                </StackLayout>
+            </Frame>
+
+                <BoxView Color="Black" HeightRequest="1" HorizontalOptions="FillAndExpand" Margin="10,20"/>
+            
+                <!--第三个-->
+            <Grid HeightRequest="40" RowSpacing="0" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Frame Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Style="{DynamicResource AvatarStyle}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <ff:CachedImage Source="a3.png"/>
+                </Frame>
+
+                <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                    <Label Text="达尼猛男" TextColor="Black" FontSize="Large" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+                    <Label Text="1h" FontSize="Large" VerticalOptions="Center" HorizontalOptions="EndAndExpand"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                    <ff:CachedImage Source="position.png" HeightRequest="15" WidthRequest="15"/>
+                    <Label Text="阿勒泰，新疆" TextColor="#a99e97" VerticalOptions="Center"/>
+                </StackLayout>
+
+            </Grid>
+            <ff:CachedImage Source="xinjiang.png" HorizontalOptions="Fill" HeightRequest="200" Aspect="AspectFill"/>
+
+                <Label TextColor="Black" FontSize="Large" Margin="10,0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="喀纳斯著名三湾之一，夹在东西两山之间，河道随山势迂回，形如一弯新月，故名月亮湾，太美了！大家快来走我设计的线路！"/>
+                            <Span Text="#旅行#月亮湾" TextColor="{StaticResource light_green}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <StackLayout Orientation="Horizontal" Margin="10,0">
+                <Frame Style="{DynamicResource AvatarStyle}">
+                    <ff:CachedImage Source="a1.png"/>
+                </Frame>
+                <Frame Style="{DynamicResource AvatarStyle}">
+                    <ff:CachedImage Source="a2.png"/>
+                </Frame>
+                <Frame Style="{DynamicResource AvatarStyle}">
+                    <ff:CachedImage Source="a3.png"/>
+                </Frame>
+                <Frame Style="{DynamicResource AvatarStyle}">
+                    <ff:CachedImage Source="a4.png"/>
+                </Frame>
+                <Frame Style="{DynamicResource AvatarStyle}">
+                    <ff:CachedImage Source="a5.png"/>
+                </Frame>
+                <Frame HeightRequest="40" WidthRequest="80" Padding="0" CornerRadius="20" HasShadow="False" BackgroundColor="#4c4b52" VerticalOptions="CenterAndExpand">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <ff:CachedImage Source="like_white.png" HeightRequest="20" WidthRequest="20"/>
+                        <Label Text="+7" FontSize="Medium" TextColor="White" VerticalOptions="Center"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
         </StackLayout>
+
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
