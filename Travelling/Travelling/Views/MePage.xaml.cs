@@ -16,5 +16,17 @@ namespace Travelling.Views
         {
             InitializeComponent();
         }
+
+
+        async void OnDismissButtonClicked(object sender, EventArgs args)
+        {
+            // Page appearance not animated
+            await Navigation.PopModalAsync(false);
+        }
+
+        private void ImageButton_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

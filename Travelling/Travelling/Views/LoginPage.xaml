@@ -1,13 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<controls:GradientContentPage NavigationPage.BackButtonTitle=""
-                              StartColor="{StaticResource light_blue}" 
-                              EndColor="{StaticResource light_green}" 
-                              xmlns="http://xamarin.com/schemas/2014/forms" 
-                              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-                              xmlns:controls="clr-namespace:Travelling.Controls" 
-                              x:Class="Travelling.Views.LoginPage">
+<ContentPage NavigationPage.BackButtonTitle=""
+             xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:controls="clr-namespace:Travelling.Controls" 
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="Travelling.Views.LoginPage">
 
-    <controls:GradientContentPage.Resources>
+    <ContentPage.Resources>
         <Style x:Name="FrameStyle" TargetType="Frame">
             <Setter Property="WidthRequest" Value="300"/>
             <Setter Property="HeightRequest" Value="40"/>
@@ -36,9 +35,10 @@
             <Setter Property="VerticalOptions" Value="Center"/>
             <Setter Property="FontSize" Value="Large"/>
         </Style>
-    </controls:GradientContentPage.Resources>
+    </ContentPage.Resources>
 
     <Grid x:Name="MainGrid">
+        <!--
         <StackLayout>
             <Label Text="XTravel" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" FontSize="72" TextColor="White" WidthRequest="200" FontFamily="{StaticResource font_title}"/>
 
@@ -65,6 +65,13 @@
             <Label Text="XX科技有限责任公司" FontSize="Small" TextColor="White"
                    HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
         </StackLayout>
+        -->
+        
+        <ff:CachedImage Source="loginbg.png"/>
+        <Button Text="开启云端之旅" WidthRequest="200" HeightRequest="50" CornerRadius="25" TextColor="White"
+                HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Margin="0,250,0,0" FontFamily="SIMYOU" FontSize="Title"
+                BackgroundColor="Transparent" BorderColor="White" BorderWidth="2" Clicked="LoginButton_Clicked"/>
+        
     </Grid>
 
-</controls:GradientContentPage>
+</ContentPage>

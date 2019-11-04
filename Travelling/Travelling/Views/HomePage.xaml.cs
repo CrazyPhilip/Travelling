@@ -36,5 +36,11 @@ namespace Travelling.Views
         {
 
         }
+
+        private void MenuButton_Clicked(object sender, EventArgs e)
+        {
+            FlyoutHeader flyoutHeader = new FlyoutHeader();
+            Navigation.PushModalAsync(flyoutHeader, false);
+        }
     }
 }
