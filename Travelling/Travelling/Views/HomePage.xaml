@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:custom="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
+             xmlns:views="clr-namespace:Travelling.Views"
              xmlns:controls="clr-namespace:Travelling.Controls"
              xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              mc:Ignorable="d"
@@ -71,66 +72,83 @@
                 </StackLayout>
             </Frame>
         </StackLayout>
-        
-        <ScrollView>
+
+        <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
             <StackLayout Orientation="Horizontal" Margin="10,0,0,0" Spacing="10">
-                <Button Style="{DynamicResource PageButton}"  Text="线路设计" BackgroundColor="#27bcad" TextColor="White"/>
-                <Button Style="{DynamicResource PageButton}" Text="游记手账" Clicked="Button_Clicked"/>
-                <Button Style="{DynamicResource PageButton}" Text="探店"/>
-                <Button Style="{DynamicResource PageButton}" Text="vlog"/>
+                <Frame Margin="5" HeightRequest="40" BackgroundColor="{StaticResource light_green}" CornerRadius="20" Padding="0"
+                   VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                    <Label Text="线路设计" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Medium">
+                        <Label.Behaviors>
+                            <controls:RadioBehavior x:Name="xianlusheji" IsChecked="True" GroupName="pages"/>
+                        </Label.Behaviors>
+                        <Label.Triggers>
+                            <DataTrigger TargetType="Label" Binding="{Binding Source={x:Reference xianlusheji}, Path=IsChecked}" Value="True">
+                                <Setter Property="TextColor" Value="White" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Button_Clicked_1"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Frame>
+                <Frame Margin="5" HeightRequest="40" BackgroundColor="{StaticResource light_green}" CornerRadius="20" Padding="0"
+                   VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                    <Label Text="游记手账" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Medium">
+                        <Label.Behaviors>
+                            <controls:RadioBehavior x:Name="youjishouzhang" GroupName="pages"/>
+                        </Label.Behaviors>
+                        <Label.Triggers>
+                            <DataTrigger TargetType="Label" Binding="{Binding Source={x:Reference youjishouzhang}, Path=IsChecked}" Value="True">
+                                <Setter Property="TextColor" Value="White" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Button_Clicked_2"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Frame>
+
+                <Frame Margin="5" HeightRequest="40" BackgroundColor="{StaticResource light_green}" CornerRadius="20" Padding="0"
+                   VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                    <Label Text="探店" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Medium">
+                        <Label.Behaviors>
+                            <controls:RadioBehavior x:Name="tandian" GroupName="pages"/>
+                        </Label.Behaviors>
+                        <Label.Triggers>
+                            <DataTrigger TargetType="Label" Binding="{Binding Source={x:Reference tandian}, Path=IsChecked}" Value="True">
+                                <Setter Property="TextColor" Value="White" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Button_Clicked_3"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Frame>
+
+                <Frame Margin="5" HeightRequest="40" BackgroundColor="{StaticResource light_green}" CornerRadius="20" Padding="0"
+                   VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                    <Label Text="vlog" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Medium">
+                        <Label.Behaviors>
+                            <controls:RadioBehavior x:Name="vlog" GroupName="pages"/>
+                        </Label.Behaviors>
+                        <Label.Triggers>
+                            <DataTrigger TargetType="Label" Binding="{Binding Source={x:Reference vlog}, Path=IsChecked}" Value="True">
+                                <Setter Property="TextColor" Value="White" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Button_Clicked_4"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Frame>
+
             </StackLayout>
         </ScrollView>
 
-        <ScrollView>
-            <StackLayout>
-                <StackLayout x:Name="JourneyStack" BindableLayout.ItemsSource="{Binding JourneyList}" Orientation="Vertical" Spacing="10">
-                    <BindableLayout.ItemTemplate>
-                        <DataTemplate>
-                            <Frame CornerRadius="10" HasShadow="True" Padding="0" Margin="10,0">
-                                <StackLayout BackgroundColor="Transparent" Spacing="0">
-                                    <StackLayout Orientation="Horizontal" Margin="10,5">
-                                        <Frame Style="{DynamicResource AvatarStyle}">
-                                            <ff:CachedImage Source="{Binding Avatar}"/>
-                                        </Frame>
-                                        <Label Style="{DynamicResource TitleStyle}">
-                                            <Label.FormattedText>
-                                                <FormattedString>
-                                                    <Span Text="{Binding Title}"/>
-                                                    <Span Text="·"/>
-                                                    <Span Text="{Binding Time}"/>
-                                                </FormattedString>
-                                            </Label.FormattedText>
-                                        </Label>
-                                        <ImageButton Source="more.png" Style="{DynamicResource OptionStyle}"/>
-                                    </StackLayout>
-                                    
-                                    <Frame Style="{DynamicResource CoverStyle}">
-                                        <ff:CachedImage Source="{Binding Cover}" Aspect="AspectFill"/>
-                                    </Frame>
+        <StackLayout x:Name="stack">
+            <views:RouteView/>
+        </StackLayout>
 
-                                    <StackLayout Orientation="Horizontal" Margin="10,5">
-                                        <ImageButton Source="like_red.png" Style="{DynamicResource OptionStyle}" HorizontalOptions="Start"/>
-                                        <Label Style="{DynamicResource TitleStyle}">
-                                            <Label.FormattedText>
-                                                <FormattedString>
-                                                    <Span Text="74"/>
-                                                    <Span Text="喜欢"/>
-                                                </FormattedString>
-                                            </Label.FormattedText>
-                                        </Label>
-                                        <ImageButton Source="go.png" Style="{DynamicResource OptionStyle}" HorizontalOptions="EndAndExpand"/>
-                                        <Label Text="走你！" Style="{DynamicResource TitleStyle}" HorizontalOptions="End"/>
-
-                                    </StackLayout>
-
-                                </StackLayout>
-                            </Frame>
-                        </DataTemplate>
-                    </BindableLayout.ItemTemplate>
-
-                </StackLayout>
-            </StackLayout>
-        </ScrollView>
     </StackLayout>
 
 </ContentPage>

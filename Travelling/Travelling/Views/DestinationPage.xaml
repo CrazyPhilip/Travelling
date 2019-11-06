@@ -10,56 +10,70 @@
              x:Class="Travelling.Views.DestinationPage"
              Title="目的地">
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout Orientation="Vertical">
-                <Frame Margin="10,5" HeightRequest="50" BackgroundColor="{StaticResource light_green}" CornerRadius="8" Padding="0"
+        <StackLayout>
+            <Frame Margin="10,5" HeightRequest="50" BackgroundColor="{StaticResource light_green}" CornerRadius="8" Padding="0"
                    VerticalOptions="Start" HorizontalOptions="FillAndExpand" HasShadow="False">
-                    <StackLayout Orientation="Horizontal">
-                        <ff:CachedImage Source="menu_white.png" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="10,0"/>
+                <StackLayout Orientation="Horizontal">
+                    <ff:CachedImage Source="menu_white.png" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="10,0"/>
 
-                        <ff:CachedImage Source="bell.png" HorizontalOptions="EndAndExpand" VerticalOptions="Center" Margin="10,0"/>
-                        <ff:CachedImage Source="adjust.png" HorizontalOptions="End" VerticalOptions="Center" Margin="10,0"/>
-                        <ff:CachedImage Source="search.png" HorizontalOptions="End" VerticalOptions="Center" Margin="10,0"/>
-                    </StackLayout>
-                </Frame>
-
-                <Frame Margin="10,5" HeightRequest="200" CornerRadius="8" Padding="0"
-                   VerticalOptions="Start" HorizontalOptions="FillAndExpand" HasShadow="False" IsClippedToBounds="True">
-                    <ff:CachedImage Source="xinjiang.png" Aspect="AspectFill"/>
-                </Frame>
-
-                <Frame Margin="10,5" HeightRequest="50" BackgroundColor="White" CornerRadius="8" Padding="0"
-                   VerticalOptions="Start" HorizontalOptions="FillAndExpand" HasShadow="False" BorderColor="LightGray">
-                    <controls:MyEntry Placeholder="第一站" PlaceholderColor="LightGray" TextColor="Black" Margin="20,0" 
-                                          BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-                </Frame>
-
-                <Frame Margin="10,5" HeightRequest="50" BackgroundColor="White" CornerRadius="8" Padding="0"
-                   VerticalOptions="Start" HorizontalOptions="FillAndExpand" HasShadow="False" BorderColor="LightGray">
-                    <controls:MyEntry Placeholder="第二站" PlaceholderColor="LightGray" TextColor="Black" Margin="20,0" 
-                                          BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-                </Frame>
-
-                <Frame Margin="10,5" HeightRequest="50" BackgroundColor="White" CornerRadius="8" Padding="0"
-                   VerticalOptions="Start" HorizontalOptions="FillAndExpand" HasShadow="False" BorderColor="LightGray">
-                    <controls:MyEntry Placeholder="第三站" PlaceholderColor="LightGray" TextColor="Black" Margin="20,0"
-                                      BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
-                </Frame>
-
-                <StackLayout Orientation="Horizontal" HeightRequest="50" HorizontalOptions="Center">
-                    <ff:CachedImage Source="add.png" HeightRequest="30" WidthRequest="30"/>
-                    <Label Text="添加目的地" FontSize="Large" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center"/>
+                    <ff:CachedImage Source="bell.png" HorizontalOptions="EndAndExpand" VerticalOptions="Center" Margin="10,0"/>
+                    <ff:CachedImage Source="adjust.png" HorizontalOptions="End" VerticalOptions="Center" Margin="10,0"/>
+                    <ff:CachedImage Source="search.png" HorizontalOptions="End" VerticalOptions="Center" Margin="10,0"/>
                 </StackLayout>
+            </Frame>
 
-                <Frame HeightRequest="40" WidthRequest="180" BackgroundColor="White" CornerRadius="20" Padding="0"
-                   VerticalOptions="End" HorizontalOptions="CenterAndExpand" HasShadow="False" BorderColor="LightGray">
-                    <StackLayout Orientation="Horizontal">
-                        <Picker Title="DAY" WidthRequest="120" HorizontalOptions="StartAndExpand" Margin="10,0,0,0"/>
-                        <ff:CachedImage Source="trigon.png" HorizontalOptions="EndAndExpand" Margin="0,0,10,0"/>
+            <Frame Margin="10,5" HeightRequest="200" CornerRadius="8" Padding="0"
+                   VerticalOptions="Start" HorizontalOptions="FillAndExpand" HasShadow="False" IsClippedToBounds="True">
+                <ff:CachedImage Source="xinjiang.png" Aspect="AspectFill"/>
+            </Frame>
+            <ScrollView>
+                <StackLayout Orientation="Vertical">
+
+
+                    <Label Text="第一站" FontSize="Large" Margin="10,0"/>
+                    <Frame Margin="10,5" HeightRequest="50" BackgroundColor="White" CornerRadius="8" Padding="0"
+                   VerticalOptions="Start" HorizontalOptions="FillAndExpand" HasShadow="False" BorderColor="LightGray">
+                        <controls:MyEntry PlaceholderColor="LightGray" TextColor="Black" Margin="20,0" 
+                                      BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                    </Frame>
+
+                    <Label Text="第二站" FontSize="Large" Margin="10,0"/>
+                    <Frame Margin="10,5" HeightRequest="50" BackgroundColor="White" CornerRadius="8" Padding="0"
+                   VerticalOptions="Start" HorizontalOptions="FillAndExpand" HasShadow="False" BorderColor="LightGray">
+                        <controls:MyEntry PlaceholderColor="LightGray" TextColor="Black" Margin="20,0" 
+                                      BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                    </Frame>
+
+                    <Label Text="第三站" FontSize="Large" Margin="10,0"/>
+                    <Frame Margin="10,5" HeightRequest="50" BackgroundColor="White" CornerRadius="8" Padding="0"
+                   VerticalOptions="Start" HorizontalOptions="FillAndExpand" HasShadow="False" BorderColor="LightGray">
+                        <controls:MyEntry PlaceholderColor="LightGray" TextColor="Black" Margin="20,0"
+                                      BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                    </Frame>
+                    
+                    <Label Text="第四站" FontSize="Large" Margin="10,0"/>
+                    <Frame Margin="10,5" HeightRequest="50" BackgroundColor="White" CornerRadius="8" Padding="0"
+                   VerticalOptions="Start" HorizontalOptions="FillAndExpand" HasShadow="False" BorderColor="LightGray">
+                        <controls:MyEntry PlaceholderColor="LightGray" TextColor="Black" Margin="20,0"
+                                      BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                    </Frame>
+
+                    <StackLayout Orientation="Horizontal" HeightRequest="50" HorizontalOptions="Center">
+                        <ff:CachedImage Source="add.png" HeightRequest="30" WidthRequest="30"/>
+                        <Label Text="添加目的地" FontSize="Large" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center"/>
                     </StackLayout>
-                </Frame>
-            </StackLayout>
-        </ScrollView>
-        
+
+
+                </StackLayout>
+            </ScrollView>
+            <Frame HeightRequest="40" WidthRequest="180" BackgroundColor="White" CornerRadius="20" Padding="0"
+                   VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" HasShadow="False" BorderColor="LightGray">
+                <StackLayout Orientation="Horizontal">
+                    <Picker Title="DAY" WidthRequest="120" HorizontalOptions="StartAndExpand" Margin="10,0,0,0"/>
+                    <ff:CachedImage Source="trigon.png" HorizontalOptions="EndAndExpand" Margin="0,0,10,0"/>
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
