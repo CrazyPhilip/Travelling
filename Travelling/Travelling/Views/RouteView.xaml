@@ -8,53 +8,51 @@
              x:Class="Travelling.Views.RouteView">
   <ContentView.Content>
         <ScrollView>
-            <StackLayout>
-                <StackLayout x:Name="JourneyStack" BindableLayout.ItemsSource="{Binding JourneyList}" Orientation="Vertical" Spacing="10">
-                    <BindableLayout.ItemTemplate>
-                        <DataTemplate>
-                            <Frame CornerRadius="10" HasShadow="True" Padding="0" Margin="10,0">
-                                <StackLayout BackgroundColor="Transparent" Spacing="0">
-                                    <StackLayout Orientation="Horizontal" Margin="10,5">
-                                        <Frame Style="{DynamicResource AvatarStyle}">
-                                            <ff:CachedImage Source="{Binding Avatar}"/>
-                                        </Frame>
-                                        <Label Style="{DynamicResource TitleStyle}">
-                                            <Label.FormattedText>
-                                                <FormattedString>
-                                                    <Span Text="{Binding Title}"/>
-                                                    <Span Text="·"/>
-                                                    <Span Text="{Binding Time}"/>
-                                                </FormattedString>
-                                            </Label.FormattedText>
-                                        </Label>
-                                        <ImageButton Source="more.png" Style="{DynamicResource OptionStyle}"/>
-                                    </StackLayout>
-
-                                    <Frame Style="{DynamicResource CoverStyle}">
-                                        <ff:CachedImage Source="{Binding Cover}" Aspect="AspectFill"/>
+            <StackLayout x:Name="JourneyStack" BindableLayout.ItemsSource="{Binding JourneyList}" Orientation="Vertical" Spacing="10">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="10" HasShadow="True" Padding="0" Margin="10,0">
+                            <StackLayout BackgroundColor="Transparent" Spacing="0">
+                                <StackLayout Orientation="Horizontal" Margin="10,5">
+                                    <Frame Style="{DynamicResource AvatarStyle}">
+                                        <ff:CachedImage Source="{Binding Avatar}"/>
                                     </Frame>
+                                    <Label Style="{DynamicResource TitleStyle}">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="{Binding Title}"/>
+                                                <Span Text="·"/>
+                                                <Span Text="{Binding Time}"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <ImageButton Source="more.png" Style="{DynamicResource OptionStyle}"/>
+                                </StackLayout>
 
-                                    <StackLayout Orientation="Horizontal" Margin="10,5">
-                                        <ImageButton Source="like_red.png" Style="{DynamicResource OptionStyle}" HorizontalOptions="Start"/>
-                                        <Label Style="{DynamicResource TitleStyle}">
-                                            <Label.FormattedText>
-                                                <FormattedString>
-                                                    <Span Text="74"/>
-                                                    <Span Text="喜欢"/>
-                                                </FormattedString>
-                                            </Label.FormattedText>
-                                        </Label>
-                                        <ImageButton Source="go.png" Style="{DynamicResource OptionStyle}" HorizontalOptions="EndAndExpand"/>
-                                        <Label Text="走你！" Style="{DynamicResource TitleStyle}" HorizontalOptions="End"/>
+                                <Frame Style="{DynamicResource CoverStyle}">
+                                    <ff:CachedImage Source="{Binding Cover}" Aspect="AspectFill"/>
+                                </Frame>
 
-                                    </StackLayout>
+                                <StackLayout Orientation="Horizontal" Margin="10,5">
+                                    <ImageButton Source="like_red.png" Style="{DynamicResource OptionStyle}" HorizontalOptions="Start"/>
+                                    <Label Style="{DynamicResource TitleStyle}">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="74"/>
+                                                <Span Text="喜欢"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <ImageButton Source="go.png" Style="{DynamicResource OptionStyle}" HorizontalOptions="EndAndExpand"/>
+                                    <Label Text="走你！" Style="{DynamicResource TitleStyle}" HorizontalOptions="End"/>
 
                                 </StackLayout>
-                            </Frame>
-                        </DataTemplate>
-                    </BindableLayout.ItemTemplate>
 
-                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+
             </StackLayout>
         </ScrollView>
     </ContentView.Content>

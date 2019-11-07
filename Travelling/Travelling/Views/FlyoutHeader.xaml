@@ -16,7 +16,11 @@
             </Frame>
             <Label Text="你好，山川" FontSize="48" TextColor="White" FontFamily="SIMHEI" Margin="80,0,0,80"/>
             <Label Text="个人介绍" FontSize="24" TextColor="White" FontFamily="SIMHEI" Margin="80,10"/>
-            <Label Text="我的线路" FontSize="24" TextColor="White" FontFamily="SIMHEI" Margin="80,10"/>
+            <Label Text="我的线路" FontSize="24" TextColor="White" FontFamily="SIMHEI" Margin="80,10">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
             <Label Text="收件箱" FontSize="24" TextColor="White" FontFamily="SIMHEI" Margin="80,10"/>
             <Label Text="设置" FontSize="24" TextColor="White" FontFamily="SIMHEI" Margin="80,10"/>
             <Label Text="退出登录" FontSize="24" TextColor="White" FontFamily="SIMHEI" Margin="80,80"/>

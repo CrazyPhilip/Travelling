@@ -77,5 +77,12 @@ namespace Travelling.Views
                 await Task.WhenAny(this.TranslateTo(-1000, 0, 1000, Easing.SpringOut), Task.Delay(100));
             }
         }
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            MyRoutePage myRoutePage = new MyRoutePage();
+
+            Navigation.PushModalAsync(myRoutePage);
+        }
     }
 }

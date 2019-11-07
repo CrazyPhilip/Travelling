@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ff ="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             mc:Ignorable="d"
+             x:Class="Travelling.Views.MyRoutePage">
+    <ContentPage.Content>
+        <Grid>
+            <ff:CachedImage Source="map.png" Aspect="AspectFill"/>
+
+            <ff:CachedImage Source="back.png" HeightRequest="30" WidthRequest="30" Margin="30" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"/>
+
+            <Frame BackgroundColor="{StaticResource light_green}" HasShadow="False" HeightRequest="50" WidthRequest="200"
+                   CornerRadius="25" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Margin="0,20" Padding="0">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="进行中" FontSize="Title" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="已完成" FontSize="Title" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </Frame>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

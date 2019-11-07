@@ -3,11 +3,152 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              mc:Ignorable="d"
              x:Class="Travelling.Views.HandAccountView">
-  <ContentView.Content>
-      <StackLayout>
-          <Label Text="Hello Xamarin.Forms!" />
-      </StackLayout>
-  </ContentView.Content>
+
+    <ContentView.Resources>
+        <Style TargetType="Frame">
+            <Setter Property="HeightRequest" Value="250"/>
+            <Setter Property="IsClippedToBounds" Value="True"/>
+            <Setter Property="WidthRequest" Value="190"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="BackgroundColor" Value="DimGray"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="HasShadow" Value="False"/>
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+
+        <Style x:Key="TitleStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontSize" Value="Large"/>
+        </Style>
+
+        <Style x:Key="UserStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="LightGray"/>
+            <Setter Property="FontSize" Value="Medium"/>
+        </Style>
+    </ContentView.Resources>
+
+    <ContentView.Content>
+        <ScrollView x:Name="ScrollContainer">
+            <FlexLayout Direction="Column" HeightRequest="1050" HorizontalOptions="Center" JustifyContent="Start" Wrap="Wrap">
+                
+                <Frame HeightRequest="200">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <ff:CachedImage Grid.Row="0" Source="taiguo.png" Aspect="AspectFill"/>
+                        <StackLayout Grid.Row="1"  Orientation="Vertical" Margin="10,0" Spacing="0" VerticalOptions="CenterAndExpand">
+                            <Label Text="浪漫巴厘岛" Style="{StaticResource TitleStyle}"/>
+                            <Label Text="bbibbi" Style="{StaticResource UserStyle}"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+
+                <Frame>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <ff:CachedImage Grid.Row="0" Source="xian1.png" Aspect="AspectFill"/>
+                        <StackLayout Grid.Row="1"  Orientation="Vertical" Margin="10,0" Spacing="0" VerticalOptions="CenterAndExpand">
+                            <Label Text="梦回唐朝" Style="{StaticResource TitleStyle}"/>
+                            <Label Text="醉梦一生情" Style="{StaticResource TitleStyle}"/>
+                            <Label Text="山川爱熊籽" Style="{StaticResource UserStyle}"/>
+                        </StackLayout>
+                        
+                    </Grid>
+                </Frame>
+
+                <Frame>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <ff:CachedImage Grid.Row="0" Source="xian2.png" Aspect="AspectFill"/>
+                        <StackLayout Grid.Row="1"  Orientation="Vertical" Margin="10,0" Spacing="0" VerticalOptions="CenterAndExpand">
+                            <Label Text="长安故事" Style="{StaticResource TitleStyle}"/>
+                            <Label Text="我的7日游记" Style="{StaticResource TitleStyle}"/>
+                            <Label Text="米粒不是米" Style="{StaticResource UserStyle}"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+
+                <Frame>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <ff:CachedImage Grid.Row="0" Source="kanasi.png" Aspect="AspectFill"/>
+                        <StackLayout Grid.Row="1"  Orientation="Vertical" Margin="10,0" Spacing="0" VerticalOptions="CenterAndExpand">
+                            <Label Text="喀纳斯" Style="{StaticResource TitleStyle}"/>
+                            <Label Text="漂亮的冰雪童话世界" Style="{StaticResource TitleStyle}"/>
+                            <Label Text="Joe Briggs" Style="{StaticResource UserStyle}"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+
+                <Frame>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <ff:CachedImage Grid.Row="0" Source="xiamen.png" Aspect="AspectFill"/>
+                        
+                        <StackLayout Grid.Row="1"  Orientation="Vertical" Margin="10,0" Spacing="0" VerticalOptions="CenterAndExpand">
+                            <Label Text="夏日寻梦" Style="{StaticResource TitleStyle}"/>
+                            <Label Text="从鼓浪屿走到沙坡头" Style="{StaticResource TitleStyle}"/>
+                            <Label Text="我是一只小香猪" Style="{StaticResource UserStyle}"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+
+                <Frame>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <ff:CachedImage Grid.Row="0" Source="bali.png" Aspect="AspectFill"/>
+                        
+                        <StackLayout Grid.Row="1"  Orientation="Vertical" Margin="10,0" Spacing="0" VerticalOptions="CenterAndExpand">
+                            <Label Text="巴黎9天8夜" Style="{StaticResource TitleStyle}"/>
+                            <Label Text="给你看我的手账" Style="{StaticResource TitleStyle}"/>
+                            <Label Text="胖仔今天瘦" Style="{StaticResource UserStyle}"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+
+                <Frame>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <ff:CachedImage Grid.Row="0" Source="masajji.png" Aspect="AspectFill"/>
+                        <StackLayout Grid.Row="1"  Orientation="Vertical" Margin="10,0" Spacing="0" VerticalOptions="CenterAndExpand">
+                            <Label Text="梦回唐朝" Style="{StaticResource TitleStyle}"/>
+                            <Label Text="醉梦一生情" Style="{StaticResource TitleStyle}"/>
+                            <Label Text="山川爱熊籽" Style="{StaticResource UserStyle}"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+
+            </FlexLayout>
+        </ScrollView>
+    </ContentView.Content>
 </ContentView>
