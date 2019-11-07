@@ -4,11 +4,12 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:ff ="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:controls="clr-namespace:Travelling.Controls"
              mc:Ignorable="d"
              x:Class="Travelling.Views.MyRoutePage">
     <ContentPage.Content>
         <Grid>
-            <ff:CachedImage Source="map.png" Aspect="AspectFill"/>
+            <ff:CachedImage Source="map2.png" Aspect="AspectFill"/>
 
             <ff:CachedImage Source="back.png" HeightRequest="30" WidthRequest="30" Margin="30" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"/>
 
@@ -20,6 +21,89 @@
                 </StackLayout>
             </Frame>
 
+            <AbsoluteLayout>
+                <ff:CachedImage AbsoluteLayout.LayoutBounds="85,330,30,30" Source="position_blue.png">
+                    <ff:CachedImage.Behaviors>
+                        <controls:RadioBehavior x:Name="qidian" IsChecked="True" GroupName="positions"/>
+                    </ff:CachedImage.Behaviors>
+                    <ff:CachedImage.Triggers>
+                        <DataTrigger TargetType="ff:CachedImage" Binding="{Binding Source={x:Reference qidian}, Path=IsChecked}" Value="True">
+                            <Setter Property="Scale" Value="1.2" />
+                        </DataTrigger>
+                    </ff:CachedImage.Triggers>
+                    <ff:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped_1"/>
+                    </ff:CachedImage.GestureRecognizers>
+                </ff:CachedImage>
+                <Label AbsoluteLayout.LayoutBounds="85,360,100,50" Text="起点" TextColor="Red" FontSize="Large" FontAttributes="Bold"/>
+
+                <ff:CachedImage AbsoluteLayout.LayoutBounds="40,260,30,30" Source="position_blue.png" BackgroundColor="Transparent">
+                    <ff:CachedImage.Behaviors>
+                        <controls:RadioBehavior x:Name="kuanzhaixiangzi" IsChecked="True" GroupName="positions"/>
+                    </ff:CachedImage.Behaviors>
+                    <ff:CachedImage.Triggers>
+                        <DataTrigger TargetType="ff:CachedImage" Binding="{Binding Source={x:Reference kuanzhaixiangzi}, Path=IsChecked}" Value="True">
+                            <Setter Property="Scale" Value="1.2" />
+                        </DataTrigger>
+                    </ff:CachedImage.Triggers>
+                    <ff:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped_2"/>
+                    </ff:CachedImage.GestureRecognizers>
+                </ff:CachedImage>
+                <Label AbsoluteLayout.LayoutBounds="70,260,100,50" Text="宽窄巷子" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+
+                <ff:CachedImage AbsoluteLayout.LayoutBounds="295,360,30,30" Source="position_blue.png" BackgroundColor="Transparent">
+                    <ff:CachedImage.Behaviors>
+                        <controls:RadioBehavior x:Name="chunxilu" IsChecked="True" GroupName="positions"/>
+                    </ff:CachedImage.Behaviors>
+                    <ff:CachedImage.Triggers>
+                        <DataTrigger TargetType="ff:CachedImage" Binding="{Binding Source={x:Reference chunxilu}, Path=IsChecked}" Value="True">
+                            <Setter Property="Scale" Value="1.2" />
+                        </DataTrigger>
+                    </ff:CachedImage.Triggers>
+                    <ff:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped_3"/>
+                    </ff:CachedImage.GestureRecognizers>
+                </ff:CachedImage>
+                <Label AbsoluteLayout.LayoutBounds="270,390,100,50" Text="春熙路" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+
+                <ff:CachedImage AbsoluteLayout.LayoutBounds="345,385,30,30" Source="position_blue.png" BackgroundColor="Transparent">
+                    <ff:CachedImage.Behaviors>
+                        <controls:RadioBehavior x:Name="taiguli" IsChecked="True" GroupName="positions"/>
+                    </ff:CachedImage.Behaviors>
+                    <ff:CachedImage.Triggers>
+                        <DataTrigger TargetType="ff:CachedImage" Binding="{Binding Source={x:Reference taiguli}, Path=IsChecked}" Value="True">
+                            <Setter Property="Scale" Value="1.2" />
+                        </DataTrigger>
+                    </ff:CachedImage.Triggers>
+                    <ff:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped_4"/>
+                    </ff:CachedImage.GestureRecognizers>
+                </ff:CachedImage>
+                <Label AbsoluteLayout.LayoutBounds="350,410,100,50" Text="太古里" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+
+                <ff:CachedImage AbsoluteLayout.LayoutBounds="360,500,30,30" Source="position_blue.png" BackgroundColor="Transparent">
+                    <ff:CachedImage.Behaviors>
+                        <controls:RadioBehavior x:Name="anshunlangqiao" IsChecked="True" GroupName="positions"/>
+                    </ff:CachedImage.Behaviors>
+                    <ff:CachedImage.Triggers>
+                        <DataTrigger TargetType="ff:CachedImage" Binding="{Binding Source={x:Reference anshunlangqiao}, Path=IsChecked}" Value="True">
+                            <Setter Property="Scale" Value="1.2" />
+                        </DataTrigger>
+                    </ff:CachedImage.Triggers>
+                    <ff:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped_5"/>
+                    </ff:CachedImage.GestureRecognizers>
+                </ff:CachedImage>
+                <Label AbsoluteLayout.LayoutBounds="350,530,100,50" Text="安顺廊桥" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+
+                <Label AbsoluteLayout.LayoutBounds="160,360,100,50" Text="天府广场" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+            </AbsoluteLayout>
+
+            <ScrollView VerticalOptions="EndAndExpand" HeightRequest="300">
+                <StackLayout x:Name="stack" Margin="10,0" HeightRequest="400"/>
+            </ScrollView>
+            
         </Grid>
     </ContentPage.Content>
 </ContentPage>

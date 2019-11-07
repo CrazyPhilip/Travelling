@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             mc:Ignorable="d"
+             x:Class="Travelling.Views.DetailView">
+    <ContentView.Content>
+
+            <StackLayout Orientation="Vertical">
+                <Frame BackgroundColor="White" HeightRequest="150" HasShadow="False" CornerRadius="8" Padding="0" IsClippedToBounds="True">
+                    <Grid RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="5"/>
+                            <RowDefinition Height="100"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="50"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Row="0" Grid.Column="0" x:Name="title" FontSize="Title" TextColor="Black" Margin="10,0" VerticalOptions="CenterAndExpand"/>
+                        <Button Grid.Row="0" Grid.Column="1" HeightRequest="40" CornerRadius="20" WidthRequest="80" 
+                            HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Large"
+                            BackgroundColor="{StaticResource light_green}" Text="打卡"/>
+                        <ff:CachedImage Grid.Row="0" Grid.Column="2" Source="more.png" HeightRequest="30" WidthRequest="30" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+
+                        <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Color="LightGray" HeightRequest="1" Margin="10,0" VerticalOptions="CenterAndExpand"/>
+
+                        <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" x:Name="description" FontSize="Large" TextColor="Black" Margin="10,0"/>
+
+                        <ff:CachedImage Grid.Row="2" Grid.Column="2" Source="more.png" HeightRequest="30" WidthRequest="30" HorizontalOptions="Start" VerticalOptions="End"/>
+                    </Grid>
+                </Frame>
+
+                <Frame BackgroundColor="White" HeightRequest="200" HasShadow="False" CornerRadius="8" Padding="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="100"/>
+                        </Grid.RowDefinitions>
+
+                        <StackLayout Grid.Row="0" Orientation="Horizontal">
+                            <ff:CachedImage Source="avatar6.png" HeightRequest="40" WidthRequest="40" Margin="20,0,10,0"/>
+                            <Label x:Name="user" FontSize="Title" TextColor="Black" Margin="10,0" VerticalOptions="CenterAndExpand"/>
+                        </StackLayout>
+
+                        <ImageButton Grid.Row="1" Source="diary.png" HeightRequest="100" WidthRequest="200" BackgroundColor="LightGray" CornerRadius="8" HorizontalOptions="CenterAndExpand"/>
+                    </Grid>
+                </Frame>
+
+            </StackLayout>
+
+    </ContentView.Content>
+</ContentView>
