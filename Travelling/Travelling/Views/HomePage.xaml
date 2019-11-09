@@ -20,7 +20,7 @@
             <Setter Property="VerticalOptions" Value="Center"/>
         </Style>
         <Style x:Key="TitleStyle" TargetType="Label">
-            <Setter Property="FontSize" Value="Medium"/>
+            <Setter Property="FontSize" Value="Small"/>
             <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
             <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
             <Setter Property="VerticalTextAlignment" Value="Center"/>
@@ -60,13 +60,16 @@
 
     <StackLayout Spacing="0">
         <StackLayout Orientation="Horizontal" Spacing="0">
-            <ImageButton x:Name="MenuButton" Source="menu.png" HeightRequest="30" WidthRequest="30" Margin="10,0,0,0"
-                         Clicked="MenuButton_Clicked" BackgroundColor="Transparent"
-                         HorizontalOptions="Center" VerticalOptions="Center"/>
+            <ff:CachedImage x:Name="MenuButton" Source="menu.png" HeightRequest="30" WidthRequest="30" Margin="10,0,0,0"
+                         BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center">
+                <ff:CachedImage.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="MenuButton_Clicked"/>
+                </ff:CachedImage.GestureRecognizers>
+            </ff:CachedImage>
 
-            <Frame Margin="10,5" HeightRequest="50" BackgroundColor="#a1a1a1" CornerRadius="8" Padding="0"
+            <Frame Margin="10,5" HeightRequest="30" BackgroundColor="#a1a1a1" CornerRadius="8" Padding="0"
                    VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
-                <StackLayout HeightRequest="40" Orientation="Horizontal" VerticalOptions="Center">
+                <StackLayout HeightRequest="30" Orientation="Horizontal" VerticalOptions="Center">
                     <ff:CachedImage Source="search.png" VerticalOptions="Center" HeightRequest="20" WidthRequest="20" Margin="10,0"/>
                     <controls:MyEntry Placeholder="成都，来了就走不了了" PlaceholderColor="White" TextColor="White" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
                 </StackLayout>
@@ -77,7 +80,7 @@
             <StackLayout Orientation="Horizontal" HeightRequest="50" Margin="5,0,0,0" Spacing="10">
                 <Frame Margin="5" HeightRequest="40" BackgroundColor="{StaticResource light_green}" CornerRadius="20" Padding="0"
                    VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
-                    <Label Text="线路设计" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Medium">
+                    <Label Text="线路设计" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Small">
                         <Label.Behaviors>
                             <controls:RadioBehavior x:Name="xianlusheji" IsChecked="True" GroupName="pages"/>
                         </Label.Behaviors>
@@ -93,7 +96,7 @@
                 </Frame>
                 <Frame Margin="5" HeightRequest="40" BackgroundColor="{StaticResource light_green}" CornerRadius="20" Padding="0"
                    VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
-                    <Label Text="游记手账" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Medium">
+                    <Label Text="游记手账" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Small">
                         <Label.Behaviors>
                             <controls:RadioBehavior x:Name="youjishouzhang" GroupName="pages"/>
                         </Label.Behaviors>
@@ -110,7 +113,7 @@
 
                 <Frame Margin="5" HeightRequest="40" BackgroundColor="{StaticResource light_green}" CornerRadius="20" Padding="0"
                    VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
-                    <Label Text="探店" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Medium">
+                    <Label Text="探店" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Small">
                         <Label.Behaviors>
                             <controls:RadioBehavior x:Name="tandian" GroupName="pages"/>
                         </Label.Behaviors>
@@ -127,7 +130,7 @@
 
                 <Frame Margin="5" HeightRequest="40" BackgroundColor="{StaticResource light_green}" CornerRadius="20" Padding="0"
                    VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
-                    <Label Text="vlog" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Medium">
+                    <Label Text="vlog" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Small">
                         <Label.Behaviors>
                             <controls:RadioBehavior x:Name="vlog" GroupName="pages"/>
                         </Label.Behaviors>

@@ -9,21 +9,21 @@
              x:Class="Travelling.Views.FlyoutHeader">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
-            <Frame HeightRequest="100" WidthRequest="100" CornerRadius="50"
+            <Frame HeightRequest="60" WidthRequest="60" CornerRadius="30"
                    HorizontalOptions="Start" VerticalOptions="Start" Margin="40,80,0,0"
                    HasShadow="False" BorderColor="White" IsClippedToBounds="True" Padding="0">
-                <ff:CachedImage Source="a4.png" HorizontalOptions="Fill" VerticalOptions="Fill"/>
+                <ff:CachedImage Source="a4.png" Aspect="AspectFill" HorizontalOptions="Fill" VerticalOptions="Fill"/>
             </Frame>
-            <Label Text="你好，山川" FontSize="48" TextColor="White" FontFamily="SIMHEI" Margin="80,0,0,80"/>
-            <Label Text="个人介绍" FontSize="24" TextColor="White" FontFamily="SIMHEI" Margin="80,10"/>
-            <Label Text="我的线路" FontSize="24" TextColor="White" FontFamily="SIMHEI" Margin="80,10">
+            <Label Text="你好，山川" FontSize="36" TextColor="White" FontFamily="SIMHEI" Margin="40,0,0,20"/>
+            <Label Text="个人介绍" FontSize="Medium" TextColor="White" FontFamily="SIMHEI" Margin="40,10"/>
+            <Label Text="我的线路" FontSize="Medium" TextColor="White" FontFamily="SIMHEI" Margin="40,10">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"/>
                 </Label.GestureRecognizers>
             </Label>
-            <Label Text="收件箱" FontSize="24" TextColor="White" FontFamily="SIMHEI" Margin="80,10"/>
-            <Label Text="设置" FontSize="24" TextColor="White" FontFamily="SIMHEI" Margin="80,10"/>
-            <Label Text="退出登录" FontSize="24" TextColor="White" FontFamily="SIMHEI" Margin="80,80"/>
+            <Label Text="收件箱" FontSize="Medium" TextColor="White" FontFamily="SIMHEI" Margin="40,10"/>
+            <Label Text="设置" FontSize="Medium" TextColor="White" FontFamily="SIMHEI" Margin="40,10"/>
+            <Label Text="退出登录" FontSize="Medium" TextColor="White" FontFamily="SIMHEI" Margin="40,40"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -8,51 +8,52 @@
              x:Class="Travelling.Views.DetailView">
     <ContentView.Content>
 
-            <StackLayout Orientation="Vertical">
-                <Frame BackgroundColor="White" HeightRequest="150" HasShadow="False" CornerRadius="8" Padding="0" IsClippedToBounds="True">
-                    <Grid RowSpacing="0">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="50"/>
-                            <RowDefinition Height="5"/>
-                            <RowDefinition Height="100"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition Width="100"/>
-                            <ColumnDefinition Width="50"/>
-                        </Grid.ColumnDefinitions>
+        <StackLayout Orientation="Vertical">
+            <Frame BackgroundColor="White" HeightRequest="150" HasShadow="False" CornerRadius="8" Padding="0" IsClippedToBounds="True">
+                <Grid RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="50"/>
+                    </Grid.ColumnDefinitions>
 
-                        <Label Grid.Row="0" Grid.Column="0" x:Name="title" FontSize="Title" TextColor="Black" Margin="10,0" VerticalOptions="CenterAndExpand"/>
-                        <Button Grid.Row="0" Grid.Column="1" HeightRequest="40" CornerRadius="20" WidthRequest="80" 
-                            HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Large"
+                    <Label Grid.Row="0" Grid.Column="0" x:Name="title" FontSize="Medium" TextColor="Black" Margin="10,0" VerticalOptions="CenterAndExpand"/>
+                    <Button Grid.Row="0" Grid.Column="1" HeightRequest="30" CornerRadius="15" WidthRequest="80" Padding="0"
+                            HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Small" TextColor="White"
                             BackgroundColor="{StaticResource light_green}" Text="打卡"/>
-                        <ff:CachedImage Grid.Row="0" Grid.Column="2" Source="more.png" HeightRequest="30" WidthRequest="30" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+                    <ImageButton Grid.Row="0" Grid.Column="2" Source="arrowdown.png" HeightRequest="30" WidthRequest="30" BackgroundColor="Transparent"
+                                 Clicked="ImageButton_Clicked" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
 
-                        <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Color="LightGray" HeightRequest="1" Margin="10,0" VerticalOptions="CenterAndExpand"/>
+                    <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Color="LightGray" HeightRequest="1" Margin="10,0" VerticalOptions="CenterAndExpand"/>
 
-                        <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" x:Name="description" FontSize="Large" TextColor="Black" Margin="10,0"/>
+                    <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" x:Name="description" FontSize="Small" TextColor="Black" Margin="10,0"/>
 
-                        <ff:CachedImage Grid.Row="2" Grid.Column="2" Source="more.png" HeightRequest="30" WidthRequest="30" HorizontalOptions="Start" VerticalOptions="End"/>
-                    </Grid>
-                </Frame>
+                    <ff:CachedImage Grid.Row="2" Grid.Column="2" Source="more.png" HeightRequest="30" WidthRequest="30" HorizontalOptions="Start" VerticalOptions="End"/>
+                </Grid>
+            </Frame>
 
-                <Frame BackgroundColor="White" HeightRequest="200" HasShadow="False" CornerRadius="8" Padding="0">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="60"/>
-                            <RowDefinition Height="100"/>
-                        </Grid.RowDefinitions>
+            <Frame BackgroundColor="White" HeightRequest="200" HasShadow="False" CornerRadius="8" Padding="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
 
-                        <StackLayout Grid.Row="0" Orientation="Horizontal">
-                            <ff:CachedImage Source="avatar6.png" HeightRequest="40" WidthRequest="40" Margin="20,0,10,0"/>
-                            <Label x:Name="user" FontSize="Title" TextColor="Black" Margin="10,0" VerticalOptions="CenterAndExpand"/>
-                        </StackLayout>
+                    <StackLayout Grid.Row="0" Orientation="Horizontal">
+                        <ff:CachedImage Source="avatar6.png" HeightRequest="30" WidthRequest="30" Margin="20,0,0,0"/>
+                        <Label x:Name="user" FontSize="Small" TextColor="Black" Margin="10,0" VerticalOptions="CenterAndExpand"/>
+                    </StackLayout>
 
-                        <ImageButton Grid.Row="1" Source="diary.png" HeightRequest="100" WidthRequest="200" BackgroundColor="LightGray" CornerRadius="8" HorizontalOptions="CenterAndExpand"/>
-                    </Grid>
-                </Frame>
+                    <ImageButton Grid.Row="1" Source="diary.png" HeightRequest="100" WidthRequest="200" BackgroundColor="LightGray" CornerRadius="8" HorizontalOptions="CenterAndExpand"/>
+                </Grid>
+            </Frame>
 
-            </StackLayout>
+        </StackLayout>
 
     </ContentView.Content>
 </ContentView>

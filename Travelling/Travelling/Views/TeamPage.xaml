@@ -11,15 +11,15 @@
              Title="小组">
     <ContentPage.Content>
         <StackLayout>
-            <Frame Margin="10,0" HeightRequest="50" BackgroundColor="#a1a1a1" CornerRadius="8" Padding="0"
+            <Frame Margin="10,5" HeightRequest="30" BackgroundColor="#a1a1a1" CornerRadius="8" Padding="0"
                    VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
-                <StackLayout HeightRequest="40" Orientation="Horizontal" VerticalOptions="Center">
+                <StackLayout HeightRequest="30" Orientation="Horizontal" VerticalOptions="Center">
                     <ff:CachedImage Source="search.png" VerticalOptions="Center" HeightRequest="20" WidthRequest="20" Margin="10,0"/>
                     <controls:MyEntry Placeholder="成都，来了就走不了了" PlaceholderColor="White" TextColor="White" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
                 </StackLayout>
             </Frame>
 
-            <Label Text="新组预报" FontSize="Large" TextColor="{StaticResource light_green}" Margin="10,0"/>
+            <Label Text="新组预报" FontSize="Medium" TextColor="{StaticResource light_green}" Margin="10,0"/>
 
             <ScrollView>
                 <StackLayout>
@@ -29,28 +29,28 @@
                                 <Frame HeightRequest="100" WidthRequest="120" HasShadow="False" CornerRadius="10" Padding="0" IsClippedToBounds="True">
                                     <ff:CachedImage Source="t1.png" Aspect="AspectFill"/>
                                 </Frame>
-                                <Label Text="四川周边游" TextColor="White" FontSize="Title" VerticalOptions="End" Margin="10"/>
+                                <Label Text="四川周边游" TextColor="White" FontSize="Medium" VerticalOptions="End" Margin="10"/>
                             </Grid>
 
                             <Grid HeightRequest="150" WidthRequest="190" Margin="5" Padding="0">
                                 <Frame HeightRequest="100" WidthRequest="120" HasShadow="False" CornerRadius="10" Padding="0" IsClippedToBounds="True">
                                     <ff:CachedImage Source="t2.png" Aspect="AspectFill"/>
                                 </Frame>
-                                <Label Text="热门好物分享" TextColor="White" FontSize="Title" VerticalOptions="End" Margin="10"/>
+                                <Label Text="热门好物分享" TextColor="White" FontSize="Medium" VerticalOptions="End" Margin="10"/>
                             </Grid>
 
                             <Grid HeightRequest="150" WidthRequest="190" Margin="5" Padding="0">
                                 <Frame HeightRequest="100" WidthRequest="120" HasShadow="False" CornerRadius="10" Padding="0" IsClippedToBounds="True">
                                     <ff:CachedImage Source="t1.png" Aspect="AspectFill"/>
                                 </Frame>
-                                <Label Text="四川周边游" TextColor="White" FontSize="Title" VerticalOptions="End" Margin="10"/>
+                                <Label Text="四川周边游" TextColor="White" FontSize="Medium" VerticalOptions="End" Margin="10"/>
                             </Grid>
                         </StackLayout>
                     </ScrollView>
 
                     <StackLayout Orientation="Horizontal" Margin="10,5">
-                        <Label Text="我加入的" FontSize="36" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
-                        <Label Text="全部" FontSize="Large" HorizontalOptions="EndAndExpand" VerticalOptions="Center"/>
+                        <Label Text="我加入的" FontSize="Medium" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+                        <Label Text="全部" FontSize="Small" HorizontalOptions="EndAndExpand" VerticalOptions="Center"/>
                         <ff:CachedImage Source="forward.png" HorizontalOptions="End" VerticalOptions="Center"/>
                     </StackLayout>
 
@@ -73,26 +73,26 @@
                                HasShadow="False" CornerRadius="10" Padding="0" IsClippedToBounds="True">
                             <ff:CachedImage Source="t3.png" Aspect="AspectFill"/>
                         </Frame>
-                        <Label Grid.Row="0" Grid.Column="1" Text="热门小组" TextColor="Black" FontSize="Large"/>
-                        <Label Grid.Row="1" Grid.Column="1" Text="榜单更新" FontSize="Medium"/>
-                        <Label Grid.Row="2" Grid.Column="1" Text="Jan 15-17" FontSize="Medium"/>
+                        <Label Grid.Row="0" Grid.Column="1" Text="热门小组" TextColor="Black" FontSize="Medium"/>
+                        <Label Grid.Row="1" Grid.Column="1" Text="榜单更新" FontSize="Small"/>
+                        <Label Grid.Row="2" Grid.Column="1" Text="Jan 15-17" FontSize="Small"/>
 
                         <Frame Grid.Row="0" Grid.Column="2" Grid.RowSpan="4" HeightRequest="60" WidthRequest="60" 
                                VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
                                HasShadow="False" CornerRadius="10" Padding="0" IsClippedToBounds="True">
                             <ff:CachedImage Source="t4.png" Aspect="AspectFill"/>
                         </Frame>
-                        <Label Grid.Row="0" Grid.Column="3" Text="成都旅游情报局" TextColor="Black" FontSize="Large"/>
-                        <Label Grid.Row="1" Grid.Column="3" Text="成都，四川" FontSize="Medium"/>
-                        <Label Grid.Row="2" Grid.Column="3" Text="999+条更新" FontSize="Medium"/>
+                        <Label Grid.Row="0" Grid.Column="3" Text="成都旅游情报局" TextColor="Black" FontSize="Medium"/>
+                        <Label Grid.Row="1" Grid.Column="3" Text="成都，四川" FontSize="Small"/>
+                        <Label Grid.Row="2" Grid.Column="3" Text="999+条更新" FontSize="Small"/>
 
                     </Grid>
 
-                    <BoxView Color="Black" HeightRequest="1" HorizontalOptions="FillAndExpand" Margin="10,20"/>
+                    <BoxView Color="Black" HeightRequest="1" HorizontalOptions="FillAndExpand" Margin="10"/>
 
                     <StackLayout Orientation="Horizontal" Margin="10,5">
-                        <Label Text="小组讨论" FontSize="36" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
-                        <Label Text="讨论记录" FontSize="Large" HorizontalOptions="EndAndExpand" VerticalOptions="Center"/>
+                        <Label Text="小组讨论" FontSize="Medium" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+                        <Label Text="讨论记录" FontSize="Small" HorizontalOptions="EndAndExpand" VerticalOptions="Center"/>
                         <ff:CachedImage Source="forward.png" HorizontalOptions="End" VerticalOptions="Center"/>
                     </StackLayout>
 
@@ -114,9 +114,9 @@
                                HasShadow="False" CornerRadius="10" Padding="0" IsClippedToBounds="True">
                             <ff:CachedImage Source="t4.png" Aspect="AspectFill"/>
                         </Frame>
-                        <Label Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Text="旅行手帐分享|头一次晒手帐 别喷我" FontSize="Title"/>
-                        <Label Grid.Row="2" Grid.Column="1" Text="成都，四川" FontSize="Large"/>
-                        <Label Grid.Row="3" Grid.Column="1" Text="4小时前更新" FontSize="Large"/>
+                        <Label Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Text="旅行手帐分享|头一次晒手帐 别喷我" TextColor="Black" FontSize="Medium"/>
+                        <Label Grid.Row="2" Grid.Column="1" Text="成都，四川" FontSize="Small"/>
+                        <Label Grid.Row="3" Grid.Column="1" Text="4小时前更新" FontSize="Small"/>
 
                         <ff:CachedImage Grid.Row="0" Grid.Column="2" Source="m1.png" HeightRequest="20" WidthRequest="20"/>
                         <Label Grid.Row="1" Grid.Column="2" Text="73" TextColor="LightGray" FontSize="Large" HorizontalOptions="Center"/>
@@ -141,9 +141,9 @@
                                HasShadow="False" CornerRadius="10" Padding="0" IsClippedToBounds="True">
                             <ff:CachedImage Source="t5.png" Aspect="AspectFill"/>
                         </Frame>
-                        <Label Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Text="上海初探|第一次一人上海游" FontSize="Title"/>
-                        <Label Grid.Row="2" Grid.Column="1" Text="佛山，广东" FontSize="Large"/>
-                        <Label Grid.Row="3" Grid.Column="1" Text="5小时前更新" FontSize="Large"/>
+                        <Label Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Text="上海初探|第一次一人上海游" TextColor="Black" FontSize="Medium"/>
+                        <Label Grid.Row="2" Grid.Column="1" Text="佛山，广东" FontSize="Small"/>
+                        <Label Grid.Row="3" Grid.Column="1" Text="5小时前更新" FontSize="Small"/>
 
                         <ff:CachedImage Grid.Row="0" Grid.Column="2" Source="m1.png" HeightRequest="20" WidthRequest="20"/>
                         <Label Grid.Row="1" Grid.Column="2" Text="125" TextColor="LightGray" FontSize="Large" HorizontalOptions="Center"/>

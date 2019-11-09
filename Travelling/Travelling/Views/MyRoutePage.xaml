@@ -13,16 +13,16 @@
 
             <ff:CachedImage Source="back.png" HeightRequest="30" WidthRequest="30" Margin="30" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"/>
 
-            <Frame BackgroundColor="{StaticResource light_green}" HasShadow="False" HeightRequest="50" WidthRequest="200"
-                   CornerRadius="25" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Margin="0,20" Padding="0">
+            <Frame BackgroundColor="{StaticResource light_green}" HasShadow="False" HeightRequest="40" WidthRequest="200"
+                   CornerRadius="20" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Margin="0,20" Padding="0">
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="进行中" FontSize="Title" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
-                    <Label Text="已完成" FontSize="Title" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="进行中" FontSize="Medium" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="已完成" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
                 </StackLayout>
             </Frame>
 
             <AbsoluteLayout>
-                <ff:CachedImage AbsoluteLayout.LayoutBounds="85,330,30,30" Source="position_blue.png">
+                <ff:CachedImage AbsoluteLayout.LayoutBounds="75,245,20,20" Source="position_blue.png">
                     <ff:CachedImage.Behaviors>
                         <controls:RadioBehavior x:Name="qidian" IsChecked="True" GroupName="positions"/>
                     </ff:CachedImage.Behaviors>
@@ -35,9 +35,9 @@
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped_1"/>
                     </ff:CachedImage.GestureRecognizers>
                 </ff:CachedImage>
-                <Label AbsoluteLayout.LayoutBounds="85,360,100,50" Text="起点" TextColor="Red" FontSize="Large" FontAttributes="Bold"/>
+                <Label AbsoluteLayout.LayoutBounds="95,250,100,50" Text="起点" TextColor="Red" FontSize="Small" FontAttributes="Bold"/>
 
-                <ff:CachedImage AbsoluteLayout.LayoutBounds="40,260,30,30" Source="position_blue.png" BackgroundColor="Transparent">
+                <ff:CachedImage AbsoluteLayout.LayoutBounds="40,190,20,20" Source="position_blue.png" BackgroundColor="Transparent">
                     <ff:CachedImage.Behaviors>
                         <controls:RadioBehavior x:Name="kuanzhaixiangzi" IsChecked="True" GroupName="positions"/>
                     </ff:CachedImage.Behaviors>
@@ -50,9 +50,9 @@
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped_2"/>
                     </ff:CachedImage.GestureRecognizers>
                 </ff:CachedImage>
-                <Label AbsoluteLayout.LayoutBounds="70,260,100,50" Text="宽窄巷子" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+                <Label AbsoluteLayout.LayoutBounds="60,190,100,50" Text="宽窄巷子" TextColor="Black" FontSize="Small" FontAttributes="Bold"/>
 
-                <ff:CachedImage AbsoluteLayout.LayoutBounds="295,360,30,30" Source="position_blue.png" BackgroundColor="Transparent">
+                <ff:CachedImage AbsoluteLayout.LayoutBounds="250,270,20,20" Source="position_blue.png" BackgroundColor="Transparent">
                     <ff:CachedImage.Behaviors>
                         <controls:RadioBehavior x:Name="chunxilu" IsChecked="True" GroupName="positions"/>
                     </ff:CachedImage.Behaviors>
@@ -65,9 +65,9 @@
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped_3"/>
                     </ff:CachedImage.GestureRecognizers>
                 </ff:CachedImage>
-                <Label AbsoluteLayout.LayoutBounds="270,390,100,50" Text="春熙路" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+                <Label AbsoluteLayout.LayoutBounds="270,270,100,50" Text="春熙路" TextColor="Black" FontSize="Small" FontAttributes="Bold"/>
 
-                <ff:CachedImage AbsoluteLayout.LayoutBounds="345,385,30,30" Source="position_blue.png" BackgroundColor="Transparent">
+                <ff:CachedImage AbsoluteLayout.LayoutBounds="295,290,20,20" Source="position_blue.png" BackgroundColor="Transparent">
                     <ff:CachedImage.Behaviors>
                         <controls:RadioBehavior x:Name="taiguli" IsChecked="True" GroupName="positions"/>
                     </ff:CachedImage.Behaviors>
@@ -80,9 +80,9 @@
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped_4"/>
                     </ff:CachedImage.GestureRecognizers>
                 </ff:CachedImage>
-                <Label AbsoluteLayout.LayoutBounds="350,410,100,50" Text="太古里" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+                <Label AbsoluteLayout.LayoutBounds="300,310,100,50" Text="太古里" TextColor="Black" FontSize="Small" FontAttributes="Bold"/>
 
-                <ff:CachedImage AbsoluteLayout.LayoutBounds="360,500,30,30" Source="position_blue.png" BackgroundColor="Transparent">
+                <ff:CachedImage AbsoluteLayout.LayoutBounds="305,390,20,20" Source="position_blue.png" BackgroundColor="Transparent">
                     <ff:CachedImage.Behaviors>
                         <controls:RadioBehavior x:Name="anshunlangqiao" IsChecked="True" GroupName="positions"/>
                     </ff:CachedImage.Behaviors>
@@ -95,9 +95,9 @@
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped_5"/>
                     </ff:CachedImage.GestureRecognizers>
                 </ff:CachedImage>
-                <Label AbsoluteLayout.LayoutBounds="350,530,100,50" Text="安顺廊桥" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+                <Label AbsoluteLayout.LayoutBounds="300,410,100,50" Text="安顺廊桥" TextColor="Black" FontSize="Small" FontAttributes="Bold"/>
 
-                <Label AbsoluteLayout.LayoutBounds="160,360,100,50" Text="天府广场" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+                <Label AbsoluteLayout.LayoutBounds="140,270,100,50" Text="天府广场" TextColor="Black" FontSize="Small" FontAttributes="Bold"/>
             </AbsoluteLayout>
 
             <ScrollView VerticalOptions="EndAndExpand" HeightRequest="300">

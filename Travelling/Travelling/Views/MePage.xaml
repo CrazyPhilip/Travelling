@@ -12,57 +12,62 @@
     <ContentPage.Content>
         <Grid>
 
-            <Frame HeightRequest="160" WidthRequest="160" CornerRadius="80"
-                   HorizontalOptions="CenterAndExpand" VerticalOptions="Start" Margin="0,115,0,0"
+            <Frame HeightRequest="120" WidthRequest="120" CornerRadius="60"
+                   HorizontalOptions="CenterAndExpand" VerticalOptions="Start" Margin="0,95,0,0"
                    HasShadow="False" BorderColor="#2e3442" BackgroundColor="#2e3442" IsClippedToBounds="True" Padding="0"/>
             
             <StackLayout Orientation="Vertical">
-                <Frame HeightRequest="150" WidthRequest="150" CornerRadius="75"
-                   HorizontalOptions="CenterAndExpand" VerticalOptions="Start" Margin="0,120,0,0"
+                <Frame HeightRequest="110" WidthRequest="110" CornerRadius="55"
+                   HorizontalOptions="CenterAndExpand" VerticalOptions="Start" Margin="0,100,0,0"
                    HasShadow="False" BorderColor="#2e3442" IsClippedToBounds="True" Padding="0">
                     <ff:CachedImage Source="a4.png" HorizontalOptions="Fill" VerticalOptions="Fill"/>
                 </Frame>
                 
-                <Label Text="山川" FontSize="48" TextColor="White" FontFamily="SIMHEI" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                <Label Text="山川" FontSize="36" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
                 
-                <Frame HeightRequest="50" WidthRequest="250" CornerRadius="25"
+                <Frame HeightRequest="40" WidthRequest="200" CornerRadius="20"
                    HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
                    HasShadow="False" BackgroundColor="{StaticResource light_green}" IsClippedToBounds="True" Padding="0">
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="简介" TextColor="White" FontSize="Title" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
-                        <Label Text="设置" TextColor="White" FontSize="Title" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Opacity="0.5"/>
+                        <Label Text="简介" TextColor="White" FontSize="Medium" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Label Text="设置" TextColor="White" FontSize="Medium" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Opacity="0.5"/>
                     </StackLayout>
                 </Frame>
 
                 <StackLayout VerticalOptions="CenterAndExpand">
-                    <StackLayout Orientation="Horizontal" HeightRequest="50" WidthRequest="200" HorizontalOptions="CenterAndExpand">
-                    <Label Text="我的足迹" FontSize="24" TextColor="White" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <StackLayout Orientation="Horizontal" HeightRequest="30" WidthRequest="200" HorizontalOptions="CenterAndExpand">
+                        <Label Text="我的足迹" FontSize="Medium" TextColor="White" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
                     <ff:CachedImage Source="forward.png" HeightRequest="15" WidthRequest="15" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"/>
                 </StackLayout>
 
-                <StackLayout Orientation="Horizontal" HeightRequest="50" WidthRequest="200" HorizontalOptions="CenterAndExpand">
-                    <Label Text="旅行日志" FontSize="24" TextColor="White" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                <StackLayout Orientation="Horizontal" HeightRequest="30" WidthRequest="200" HorizontalOptions="CenterAndExpand">
+                        <Label Text="旅行日志" FontSize="Medium" TextColor="White" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
                     <ff:CachedImage Source="forward.png" HeightRequest="15" WidthRequest="15" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"/>
                 </StackLayout>
 
-                <StackLayout Orientation="Horizontal" HeightRequest="50" WidthRequest="200" HorizontalOptions="CenterAndExpand">
-                    <Label Text="我的关注" FontSize="24" TextColor="White" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                <StackLayout Orientation="Horizontal" HeightRequest="30" WidthRequest="200" HorizontalOptions="CenterAndExpand">
+                        <Label Text="我的关注" FontSize="Medium" TextColor="White" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
                     <ff:CachedImage Source="forward.png" HeightRequest="15" WidthRequest="15" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"/>
                 </StackLayout>
 
-                <StackLayout Orientation="Horizontal" HeightRequest="50" WidthRequest="200" HorizontalOptions="CenterAndExpand">
-                    <Label Text="草稿箱" FontSize="24" TextColor="White" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
-                    <ff:CachedImage Source="forward.png" HeightRequest="15" WidthRequest="15" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"/>
-                </StackLayout>
+                <StackLayout Orientation="Horizontal" HeightRequest="30" WidthRequest="200" HorizontalOptions="CenterAndExpand">
+                        <Label Text="我的部落格子" FontSize="Medium" TextColor="White" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <ff:CachedImage Source="forward.png" HeightRequest="15" WidthRequest="15" BackgroundColor="Transparent"
+                                    HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand">
+                            <ff:CachedImage.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="ImageButton_Clicked_1"/>
+                            </ff:CachedImage.GestureRecognizers>
+                        </ff:CachedImage>
+                    </StackLayout>
                 </StackLayout>
                 
             </StackLayout>
 
 
             <ImageButton Source="back.png" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start" VerticalOptions="Start"
-                         Margin="30,40" BackgroundColor="Transparent" Clicked="ImageButton_Clicked"/>
+                         Margin="30" BackgroundColor="Transparent" Clicked="ImageButton_Clicked"/>
             <ImageButton Source="more_white.png" HeightRequest="20" WidthRequest="20" HorizontalOptions="End" VerticalOptions="Start"
-                         Margin="30,40" BackgroundColor="Transparent" Clicked="ImageButton_Clicked"/>
+                         Margin="30" BackgroundColor="Transparent" Clicked="ImageButton_Clicked"/>
 
 
         </Grid>

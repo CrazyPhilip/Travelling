@@ -19,6 +19,12 @@ namespace Travelling.Views
             title.Text = t;
             description.Text = d;
             user.Text = u;
+
+        }
+
+        private void ImageButton_Clicked(object sender, EventArgs e)
+        {
+            this.IsVisible = false;
         }
     }
 }

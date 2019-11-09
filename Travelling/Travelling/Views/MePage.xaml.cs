@@ -26,7 +26,14 @@ namespace Travelling.Views
 
         private void ImageButton_Clicked(object sender, EventArgs e)
         {
+            
+        }
 
+        private void ImageButton_Clicked_1(object sender, EventArgs e)
+        {
+            ShowPage showPage = new ShowPage();
+
+            Navigation.PushModalAsync(showPage);
         }
     }
 }

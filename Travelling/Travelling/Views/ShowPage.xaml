@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:controls="clr-namespace:Travelling.Controls"
+             mc:Ignorable="d"
+             BackgroundImageSource="showbg.png"
+             x:Class="Travelling.Views.ShowPage">
+    <ContentPage.Content>
+        <Grid>
+
+            <Frame HeightRequest="60" WidthRequest="60" CornerRadius="30"
+                   HorizontalOptions="End" VerticalOptions="Start" Margin="0,110,30,0"
+                   HasShadow="False" BorderColor="White" BackgroundColor="#24a89b" IsClippedToBounds="True" Padding="0">
+                <ff:CachedImage Source="edit.png" HeightRequest="30" WidthRequest="30" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            </Frame>
+
+            <StackLayout Orientation="Vertical">
+                <Label Text="我行我秀" TextColor="White" FontSize="Large" HorizontalOptions="CenterAndExpand" Margin="0,25,0,0"/>
+
+                    <StackLayout Orientation="Vertical" Margin="30,50,0,0">
+                        <Label Text="2019.11.09" TextColor="White" FontSize="Large"/>
+                        <Label Text="5:32pm" TextColor="White" FontSize="Large"/>
+                    </StackLayout>
+
+                    <Grid Margin="10,30,10,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Text="Sun" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <Label Grid.Row="0" Grid.Column="1" Text="Mon" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <Label Grid.Row="0" Grid.Column="2" Text="Tue" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <Label Grid.Row="0" Grid.Column="3" Text="Wed" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <Label Grid.Row="0" Grid.Column="4" Text="Thur" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <Label Grid.Row="0" Grid.Column="5" Text="Fri" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <Label Grid.Row="0" Grid.Column="6" Text="Sat" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+
+                    <Label Grid.Row="1" Grid.Column="0" Text="10" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+                    <Label Grid.Row="1" Grid.Column="1" Text="4" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+                    <Label Grid.Row="1" Grid.Column="2" Text="5" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+                    <Label Grid.Row="1" Grid.Column="3" Text="6" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+                    <Label Grid.Row="1" Grid.Column="4" Text="7" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <Label Grid.Row="1" Grid.Column="5" Text="8" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+                    <Frame Grid.Row="1" Grid.Column="6" HeightRequest="30" WidthRequest="30" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" 
+                           CornerRadius="15" Padding="0" BackgroundColor="{StaticResource light_green}">
+                        <Label Text="9" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    </Frame>
+                    
+                </Grid>
+
+                <BoxView Color="LightGray" HeightRequest="1" Margin="10,0" VerticalOptions="Start"/>
+
+                <Grid HorizontalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="180"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Frame Grid.Row="0" Grid.Column="1" Margin="10,5" HeightRequest="50" BackgroundColor="#f1f1f1" CornerRadius="8" Padding="0"
+                            VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                        <controls:MyEntry Placeholder="旅行的地点" PlaceholderColor="LightGray" TextColor="LightGray" BackgroundColor="Transparent" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                    </Frame>
+
+                    <Frame Grid.Row="2" Grid.Column="1" Margin="10,5" HeightRequest="50" BackgroundColor="#f1f1f1" CornerRadius="8" Padding="0"
+                            VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                        <controls:MyEntry Placeholder="+新增图片" PlaceholderColor="LightGray" TextColor="LightGray" BackgroundColor="Transparent" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                    </Frame>
+
+                    <Frame Grid.Row="4" Grid.Column="1" Margin="10,5" HeightRequest="50" BackgroundColor="#f1f1f1" CornerRadius="8" Padding="0"
+                            VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                        <controls:MyEntry Placeholder="我想说" PlaceholderColor="LightGray" TextColor="LightGray" BackgroundColor="Transparent" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                    </Frame>
+
+                    <BoxView Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" Color="{StaticResource light_green}" WidthRequest="1" HeightRequest="150" 
+                             HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+
+                    <Button Grid.Row="0" Grid.Column="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                        BackgroundColor="{StaticResource light_green}" HeightRequest="10" WidthRequest="10" CornerRadius="5"/>
+
+                    <Button Grid.Row="2" Grid.Column="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                        BackgroundColor="{StaticResource light_green}" HeightRequest="10" WidthRequest="10" CornerRadius="5"/>
+
+                    <Button Grid.Row="4" Grid.Column="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                        BackgroundColor="{StaticResource light_green}" HeightRequest="10" WidthRequest="10" CornerRadius="5"/>
+                </Grid>
+            </StackLayout>
+
+
+            <ImageButton Source="back.png" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start" VerticalOptions="Start"
+                         Margin="30" BackgroundColor="Transparent" Clicked="ImageButton_Clicked"/>
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

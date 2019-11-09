@@ -68,9 +68,9 @@
         -->
         
         <ff:CachedImage Source="loginbg.png"/>
-        <Button Text="开启云端之旅" WidthRequest="200" HeightRequest="50" CornerRadius="25" TextColor="White"
-                HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Margin="0,250,0,0" FontFamily="SIMYOU" FontSize="Title"
-                BackgroundColor="Transparent" BorderColor="White" BorderWidth="2" Clicked="LoginButton_Clicked"/>
+        <Button WidthRequest="220" HeightRequest="50" CornerRadius="25" TextColor="White"
+                HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Margin="0,270,0,0" FontFamily="SIMYOU" FontSize="Title"
+                BackgroundColor="Transparent" BorderColor="Transparent" BorderWidth="2" Clicked="LoginButton_Clicked"/>
         
     </Grid>
 
