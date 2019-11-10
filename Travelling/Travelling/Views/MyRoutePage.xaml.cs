@@ -67,5 +67,16 @@ namespace Travelling.Views
             stack.Children.Clear();
             stack.Children.Add(detailView);
         }
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            string t = "天府广场";
+            string d = "天府广场，位于四川省成都市的心脏地带，其形式与地位与北京天安门广场相似，是中国西部最大的城市中心广场。它占地面积8.8万平方米，形状为矩形，长比宽约1:1.5，地面全部由经过特殊工艺技术处理的浅色花岗岩条石铺成。";
+            string u = "心有萌虎（嗷呜）";
+            DetailView detailView = new DetailView(t, d, u);
+
+            stack.Children.Clear();
+            stack.Children.Add(detailView);
+        }
     }
 }

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             mc:Ignorable="d"
+             x:Class="Travelling.Views.TuijianView">
+  <ContentView.Content>
+        <ScrollView>
+      <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="国际" FontSize="Medium" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <Label Text="国内" FontSize="Medium" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <Label Text="成都" FontSize="Large" TextColor="{StaticResource light_green}" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"/>
+
+                    <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label Text="阴 14℃" FontSize="Micro" TextColor="{StaticResource light_green}"/>
+                    <ff:CachedImage Source="arrowdown.png" WidthRequest="10" HeightRequest="10"/>
+                </StackLayout>
+            </StackLayout>
+
+          <!--第一组-->
+            <Label Text="1.成都周边那些迷人的小镇" FontSize="Medium" TextColor="Black"/>
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <StackLayout Orientation="Horizontal" Spacing="0">
+                    <Frame HeightRequest="120" HasShadow="False" CornerRadius="10" Padding="0" IsClippedToBounds="True" Margin="5,0">
+                        <ff:CachedImage Source="b2.png" Aspect="AspectFill"/>
+                    </Frame>
+
+                        <Frame HeightRequest="120" HasShadow="False" CornerRadius="10" Padding="0" IsClippedToBounds="True" Margin="5,0">
+                        <ff:CachedImage Source="b4.png" Aspect="AspectFill"/>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+            <StackLayout Orientation="Horizontal">
+                <ff:CachedImage Source="avatar6.png" HeightRequest="30" WidthRequest="30" Margin="20,0,0,0"/>
+                <Label Text="心有萌虎（嗷呜）" FontSize="Small" TextColor="Black" Margin="10,0" VerticalOptions="CenterAndExpand"/>
+
+                <ff:CachedImage Source="like_gray.png" HeightRequest="30" WidthRequest="30" HorizontalOptions="EndAndExpand"/>
+                    <Label Text="28.6w" FontSize="Small" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="End" Margin="0,0,10,0"/>
+            </StackLayout>
+
+            <!--第二组-->
+            <Label Text="2.宽宽的窄巷子，时尚的老成都" FontSize="Medium" TextColor="Black"/>
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <StackLayout Orientation="Horizontal" Spacing="0">
+                        <Frame HeightRequest="120" HasShadow="False" CornerRadius="10" Padding="0" IsClippedToBounds="True" Margin="5,0">
+                        <ff:CachedImage Source="b0.png" Aspect="AspectFill"/>
+                    </Frame>
+
+                        <Frame HeightRequest="120" HasShadow="False" CornerRadius="10" Padding="0" IsClippedToBounds="True" Margin="5,0">
+                            <ff:CachedImage Source="b5.png" Aspect="AspectFill"/>
+                        </Frame>
+
+                        <Frame HeightRequest="120" HasShadow="False" CornerRadius="10" Padding="0" IsClippedToBounds="True" Margin="5,0">
+                        <ff:CachedImage Source="b6.png" Aspect="AspectFill"/>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+            <StackLayout Orientation="Horizontal">
+                    <Frame HeightRequest="30" WidthRequest="30" CornerRadius="15" Margin="20,0,0,0"
+                   HasShadow="False" BorderColor="White" IsClippedToBounds="True" Padding="0">
+                        <ff:CachedImage Source="a4.png" Aspect="AspectFill" HorizontalOptions="Fill" VerticalOptions="Fill"/>
+                    </Frame>
+                    <Label Text="山川" FontSize="Small" TextColor="Black" Margin="10,0" VerticalOptions="CenterAndExpand"/>
+
+                    <ff:CachedImage Source="like_gray.png" HeightRequest="30" WidthRequest="30" HorizontalOptions="EndAndExpand"/>
+                    <Label Text="28.2w" FontSize="Small" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="End" Margin="0,0,10,0"/>
+            </StackLayout>
+
+            <!--第三组-->
+            <Label Text="3.拜水都江堰，问道青城山" FontSize="Medium" TextColor="Black"/>
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <StackLayout Orientation="Horizontal" Spacing="0">
+                        <Frame HeightRequest="120" HasShadow="False" CornerRadius="10" Padding="0" IsClippedToBounds="True" Margin="5,0">
+                            <ff:CachedImage Source="b9.png" Aspect="AspectFill"/>
+                        </Frame>
+
+                        <Frame HeightRequest="120" HasShadow="False" CornerRadius="10" Padding="0" IsClippedToBounds="True" Margin="5,0">
+                        <ff:CachedImage Source="b3.png" Aspect="AspectFill"/>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+            <StackLayout Orientation="Horizontal">
+                    <Frame HeightRequest="30" WidthRequest="30" CornerRadius="15" Margin="20,0,0,0"
+                   HasShadow="False" BorderColor="White" IsClippedToBounds="True" Padding="0">
+                        <ff:CachedImage Source="avatar7.jpg" Aspect="AspectFill" HorizontalOptions="Fill" VerticalOptions="Fill"/>
+                    </Frame>
+                    <Label Text="Linen" FontSize="Small" TextColor="Black" Margin="10,0" VerticalOptions="CenterAndExpand"/>
+
+                    <ff:CachedImage Source="like_gray.png" HeightRequest="30" WidthRequest="30" HorizontalOptions="EndAndExpand"/>
+                <Label Text="26.3w" FontSize="Small" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="End" Margin="0,0,10,0"/>
+            </StackLayout>
+        </StackLayout>
+        </ScrollView>
+    </ContentView.Content>
+</ContentView>

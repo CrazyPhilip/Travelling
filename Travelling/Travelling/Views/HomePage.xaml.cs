@@ -61,7 +61,10 @@ namespace Travelling.Views
 
         private void Button_Clicked_3(object sender, EventArgs e)
         {
+            RankingPage rankingPage = new RankingPage();
 
+            stack.Children.Clear();
+            stack.Children.Add(rankingPage);
         }
 
         private void Button_Clicked_4(object sender, EventArgs e)

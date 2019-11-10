@@ -97,6 +97,19 @@
                 </ff:CachedImage>
                 <Label AbsoluteLayout.LayoutBounds="300,410,100,50" Text="安顺廊桥" TextColor="Black" FontSize="Small" FontAttributes="Bold"/>
 
+                <ff:CachedImage AbsoluteLayout.LayoutBounds="155,250,20,20" Source="position_blue.png" BackgroundColor="Transparent">
+                    <ff:CachedImage.Behaviors>
+                        <controls:RadioBehavior x:Name="tianfuguangchang" IsChecked="True" GroupName="positions"/>
+                    </ff:CachedImage.Behaviors>
+                    <ff:CachedImage.Triggers>
+                        <DataTrigger TargetType="ff:CachedImage" Binding="{Binding Source={x:Reference tianfuguangchang}, Path=IsChecked}" Value="True">
+                            <Setter Property="Scale" Value="1.2" />
+                        </DataTrigger>
+                    </ff:CachedImage.Triggers>
+                    <ff:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"/>
+                    </ff:CachedImage.GestureRecognizers>
+                </ff:CachedImage>
                 <Label AbsoluteLayout.LayoutBounds="140,270,100,50" Text="天府广场" TextColor="Black" FontSize="Small" FontAttributes="Bold"/>
             </AbsoluteLayout>
 

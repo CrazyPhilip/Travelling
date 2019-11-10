@@ -49,7 +49,12 @@
                         <Label x:Name="user" FontSize="Small" TextColor="Black" Margin="10,0" VerticalOptions="CenterAndExpand"/>
                     </StackLayout>
 
-                    <ImageButton Grid.Row="1" Source="diary.png" HeightRequest="100" WidthRequest="200" BackgroundColor="LightGray" CornerRadius="8" HorizontalOptions="CenterAndExpand"/>
+                    <StackLayout Grid.Row="1" Orientation="Vertical">
+                        <Button Text="上传图片" HeightRequest="40" WidthRequest="200" BackgroundColor="LightGray" CornerRadius="8" HorizontalOptions="CenterAndExpand"/>
+                        <Button Text="留言反馈" HeightRequest="40" WidthRequest="200" BackgroundColor="LightGray" CornerRadius="8" HorizontalOptions="CenterAndExpand"/>
+                        <Button Text="我的旅行日记" HeightRequest="40" WidthRequest="200" BackgroundColor="LightGray" CornerRadius="8" HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                    
                 </Grid>
             </Frame>
 
