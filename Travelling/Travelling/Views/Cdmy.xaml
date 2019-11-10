@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:views="clr-namespace:Travelling.Views"
+             mc:Ignorable="d"
+             x:Class="Travelling.Views.Cdmy">
+    <ContentPage.Content>
+        <Grid x:Name="MainGrid">
+            <ScrollView>
+                <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal" HeightRequest="50" HorizontalOptions="Fill" VerticalOptions="Start" BackgroundColor="{StaticResource light_green}">
+                        <ImageButton Source="back.png" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start" VerticalOptions="Center"
+                         Margin="10,0" BackgroundColor="Transparent"/>
+
+                        <Frame HeightRequest="40" WidthRequest="40" CornerRadius="20"
+                           HorizontalOptions="Start" VerticalOptions="Center"
+                           HasShadow="False" BorderColor="White" IsClippedToBounds="True" Padding="0">
+                            <ff:CachedImage Source="a5.png" Aspect="AspectFill" HorizontalOptions="Fill" VerticalOptions="Fill"/>
+                        </Frame>
+
+                        <Label Text="阿宝" TextColor="White" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="Center"/>
+
+                    </StackLayout>
+
+                    <ff:CachedImage Source="xianlusheji.png" Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="Fill"/>
+
+                    <StackLayout Orientation="Horizontal" HeightRequest="50">
+                        <ff:CachedImage Source="like_red.png" HeightRequest="40" WidthRequest="40" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+
+                        <Button Text="走你！" TextColor="White" WidthRequest="80" HeightRequest="40"
+                                HorizontalOptions="CenterAndExpand" VerticalOptions="Center" CornerRadius="5"
+                            BackgroundColor="{StaticResource light_green}" Clicked="Button_Clicked"/>
+
+                        <Label Text="留言" FontSize="Medium" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+
+            <views:GoView x:Name="goview" IsVisible="False"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

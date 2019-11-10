@@ -49,6 +49,10 @@
                                 </StackLayout>
 
                             </StackLayout>
+
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"/>
+                            </Frame.GestureRecognizers>
                         </Frame>
                     </DataTemplate>
                 </BindableLayout.ItemTemplate>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:controls="clr-namespace:Travelling.Controls"
+             mc:Ignorable="d"
+             x:Class="Travelling.Views.GoView">
+  <ContentView.Content>
+      <Grid>
+            <BoxView BackgroundColor="Gray" Opacity="0.4" HorizontalOptions="Fill" VerticalOptions="Fill">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"/>
+                </BoxView.GestureRecognizers>
+            </BoxView>
+
+            <Frame BackgroundColor="#21242d" HeightRequest="450" WidthRequest="300" CornerRadius="10" IsClippedToBounds="True"
+                   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+
+                <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal" BackgroundColor="#77cd39" HeightRequest="60">
+                        <Frame HeightRequest="40" WidthRequest="40" CornerRadius="20"
+                           HorizontalOptions="Start" VerticalOptions="Center" Margin="10,0"
+                           HasShadow="False" BorderColor="White" IsClippedToBounds="True" Padding="0">
+                            <ff:CachedImage Source="a4.png" Aspect="AspectFill" HorizontalOptions="Fill" VerticalOptions="Fill"/>
+                        </Frame>
+                        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                            <Label Text="安娜" TextColor="White" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="End"/>
+                            <Label Text="定制游策划师" TextColor="White" FontSize="Small" HorizontalOptions="Start" VerticalOptions="Start"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" Margin="20">
+                        <Label Text="加入您设计的线路！" TextColor="White" FontSize="Small" FontAttributes="Bold"/>
+                        <Label Text="您好，我是安娜，我对您设计的成都三日游十分感兴趣，打算趁周五还有周末的时间前往，我会拍好看的照片上传到平台与您分享，让我们在云游共享旅途中的美景！"
+                               FontSize="Small" LineBreakMode="WordWrap" TextColor="LightGray"/>
+                        <Label Text="我希望您能通过我分享的图片、视频、留言感受到成都的魅力！"
+                               FontSize="Small" LineBreakMode="WordWrap" TextColor="LightGray"/>
+                    </StackLayout>
+
+                    <Frame HeightRequest="50" WidthRequest="250" CornerRadius="8"
+                           HorizontalOptions="Center" VerticalOptions="EndAndExpand"
+                           HasShadow="False" BorderColor="#282d38" BackgroundColor="#282d38" IsClippedToBounds="True" Padding="0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="40"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Frame Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" HeightRequest="40" WidthRequest="40" CornerRadius="8"
+                           HorizontalOptions="Center" VerticalOptions="Center"
+                           HasShadow="False" BorderColor="#282d38" BackgroundColor="#282d38" IsClippedToBounds="True" Padding="0">
+                                <ff:CachedImage Source="t3.png" Aspect="AspectFill"/>
+                            </Frame>
+                            <Label Text="我的旅途 走你！.png" Grid.Row="0" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="End"  TextColor="White"/>
+                            <Label Text="420kb" Grid.Row="1" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Start" TextColor="LightGray"/>
+
+                            <ff:CachedImage Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" HeightRequest="30" WidthRequest="30" Source="download.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+
+                        </Grid>
+                    </Frame>
+
+                    <BoxView HeightRequest="1" Color="Gray" HorizontalOptions="Fill"/>
+
+                    <StackLayout Orientation="Horizontal" HeightRequest="50">
+                        <ff:CachedImage HeightRequest="30" WidthRequest="30" Source="huixingzhen.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <controls:MyEntry WidthRequest="180" Placeholder="发送信息..." PlaceholderColor="LightGray" TextColor="LightGray" HorizontalOptions="Start" VerticalOptions="Center"/>
+                        <ff:CachedImage HeightRequest="30" WidthRequest="30" Source="send.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    </StackLayout>
+
+                </StackLayout>
+            </Frame>
+        </Grid>
+  </ContentView.Content>
+</ContentView>

@@ -16,5 +16,11 @@ namespace Travelling.Views
         {
             InitializeComponent();
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            XLYJSC xLYJSC = new XLYJSC();
+            Navigation.PushModalAsync(xLYJSC);
+        }
     }
 }

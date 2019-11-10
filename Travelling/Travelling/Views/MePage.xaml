@@ -51,24 +51,23 @@
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" HeightRequest="30" WidthRequest="200" HorizontalOptions="CenterAndExpand">
-                        <Label Text="我的部落格子" FontSize="Medium" TextColor="White" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
-                        <ff:CachedImage Source="forward.png" HeightRequest="15" WidthRequest="15" BackgroundColor="Transparent"
-                                    HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand">
-                            <ff:CachedImage.GestureRecognizers>
+                        <Label Text="我的部落格子" FontSize="Medium" TextColor="White" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+                            <Label.GestureRecognizers>
                                 <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="ImageButton_Clicked_1"/>
-                            </ff:CachedImage.GestureRecognizers>
-                        </ff:CachedImage>
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                        <ff:CachedImage Source="forward.png" HeightRequest="15" WidthRequest="15" BackgroundColor="Transparent"
+                                    HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"/>
                     </StackLayout>
                 </StackLayout>
                 
             </StackLayout>
 
-
             <ImageButton Source="back.png" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start" VerticalOptions="Start"
                          Margin="30" BackgroundColor="Transparent" Clicked="ImageButton_Clicked"/>
             <ImageButton Source="more_white.png" HeightRequest="20" WidthRequest="20" HorizontalOptions="End" VerticalOptions="Start"
                          Margin="30" BackgroundColor="Transparent" Clicked="ImageButton_Clicked"/>
-
 
         </Grid>
 

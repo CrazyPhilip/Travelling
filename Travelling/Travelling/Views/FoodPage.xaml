@@ -126,7 +126,7 @@
             </ScrollView>
 
             <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="一键生成" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
-                    HeightRequest="40" WidthRequest="100" CornerRadius="20" BackgroundColor="{StaticResource light_green}"/>
+                    HeightRequest="40" WidthRequest="100" CornerRadius="20" BackgroundColor="{StaticResource light_green}" Clicked="Button_Clicked"/>
         </Grid>
 
     </ContentPage.Content>

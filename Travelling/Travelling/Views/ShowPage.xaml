@@ -111,6 +111,8 @@
             <ImageButton Source="back.png" HeightRequest="20" WidthRequest="20" HorizontalOptions="Start" VerticalOptions="Start"
                          Margin="30" BackgroundColor="Transparent" Clicked="ImageButton_Clicked"/>
 
+            <Button BackgroundColor="Transparent" HeightRequest="30" WidthRequest="80" HorizontalOptions="End" VerticalOptions="End" Margin="0,10" Clicked="Button_Clicked"/>
+
         </Grid>
 
     </ContentPage.Content>

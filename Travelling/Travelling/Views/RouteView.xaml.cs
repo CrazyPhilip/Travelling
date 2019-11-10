@@ -16,5 +16,12 @@ namespace Travelling.Views
         {
             InitializeComponent();
         }
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            Cdmy cdmy = new Cdmy();
+
+            Navigation.PushModalAsync(cdmy);
+        }
     }
 }

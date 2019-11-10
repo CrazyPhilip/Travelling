@@ -21,5 +21,12 @@ namespace Travelling.Views
         {
             Navigation.PopModalAsync();
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            WxwxYjsc wxwxYjsc = new WxwxYjsc();
+
+            Navigation.PushModalAsync(wxwxYjsc);
+        }
     }
 }
