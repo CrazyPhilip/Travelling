@@ -62,20 +62,20 @@
                     
                 </Grid>
 
-                <BoxView Color="LightGray" HeightRequest="1" Margin="10,0" VerticalOptions="Start"/>
+                <BoxView Color="LightGray" HeightRequest="1" Margin="10" VerticalOptions="Start"/>
 
-                <Grid HorizontalOptions="CenterAndExpand">
+                <Grid HorizontalOptions="StartAndExpand" Margin="20">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="60"/>
                         <RowDefinition Height="10"/>
-                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="60"/>
                         <RowDefinition Height="10"/>
-                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="60"/>
                     </Grid.RowDefinitions>
 
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="30"/>
-                        <ColumnDefinition Width="180"/>
+                        <ColumnDefinition Width="220"/>
                     </Grid.ColumnDefinitions>
 
                     <Frame Grid.Row="0" Grid.Column="1" Margin="10,5" HeightRequest="50" BackgroundColor="#f1f1f1" CornerRadius="8" Padding="0"
@@ -93,7 +93,7 @@
                         <controls:MyEntry Placeholder="我想说" PlaceholderColor="LightGray" TextColor="LightGray" BackgroundColor="Transparent" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
                     </Frame>
 
-                    <BoxView Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" Color="{StaticResource light_green}" WidthRequest="1" HeightRequest="150" 
+                    <BoxView Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" Color="{StaticResource light_green}" WidthRequest="1" HeightRequest="170" 
                              HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
 
                     <Button Grid.Row="0" Grid.Column="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"

@@ -80,7 +80,7 @@
                         <Frame Margin="5,5,15,0" HeightRequest="40" BackgroundColor="White" BorderColor="LightGray" CornerRadius="20" Padding="0"
                                 VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
                             <StackLayout HeightRequest="40" Orientation="Horizontal" VerticalOptions="Center">
-                                <controls:MyEntry  PlaceholderColor="White" TextColor="White" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                                <controls:MyEntry  PlaceholderColor="White" TextColor="Black" Margin="10,0" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
                                 <ff:CachedImage Source="add.png" VerticalOptions="Center" HeightRequest="20" WidthRequest="20" Margin="10,0"/>
                             </StackLayout>
                         </Frame>
@@ -89,7 +89,7 @@
                         <Frame Margin="5,5,15,0" HeightRequest="40" BackgroundColor="White" BorderColor="LightGray" CornerRadius="20" Padding="0"
                                 VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
                             <StackLayout HeightRequest="40" Orientation="Horizontal" VerticalOptions="Center">
-                                <controls:MyEntry  PlaceholderColor="White" TextColor="White" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                                <controls:MyEntry  PlaceholderColor="White" TextColor="Black" Margin="10,0" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
                                 <ff:CachedImage Source="add.png" VerticalOptions="Center" HeightRequest="20" WidthRequest="20" Margin="10,0"/>
                             </StackLayout>
                         </Frame>
@@ -98,7 +98,7 @@
                         <Frame Margin="5,5,15,0" HeightRequest="40" BackgroundColor="White" BorderColor="LightGray" CornerRadius="20" Padding="0"
                                 VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
                             <StackLayout HeightRequest="40" Orientation="Horizontal" VerticalOptions="Center">
-                                <controls:MyEntry  PlaceholderColor="White" TextColor="White" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                                <controls:MyEntry  PlaceholderColor="White" TextColor="Black" Margin="10,0" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
                                 <ff:CachedImage Source="add.png" VerticalOptions="Center" HeightRequest="20" WidthRequest="20" Margin="10,0"/>
                             </StackLayout>
                         </Frame>
@@ -107,7 +107,7 @@
                         <Frame Margin="5,5,15,0" HeightRequest="40" BackgroundColor="White" BorderColor="LightGray" CornerRadius="20" Padding="0"
                                 VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
                             <StackLayout HeightRequest="40" Orientation="Horizontal" VerticalOptions="Center">
-                                <controls:MyEntry  PlaceholderColor="White" TextColor="White" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                                <controls:MyEntry  PlaceholderColor="White" TextColor="Black" Margin="10,0" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
                                 <ff:CachedImage Source="add.png" VerticalOptions="Center" HeightRequest="20" WidthRequest="20" Margin="10,0"/>
                             </StackLayout>
                         </Frame>
@@ -116,7 +116,7 @@
                         <Frame Margin="5,5,15,0" HeightRequest="40" BackgroundColor="White" BorderColor="LightGray" CornerRadius="20" Padding="0"
                                 VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
                             <StackLayout HeightRequest="40" Orientation="Horizontal" VerticalOptions="Center">
-                                <controls:MyEntry  PlaceholderColor="White" TextColor="White" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                                <controls:MyEntry  PlaceholderColor="White" TextColor="Black" Margin="10,0" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
                                 <ff:CachedImage Source="add.png" VerticalOptions="Center" HeightRequest="20" WidthRequest="20" Margin="10,0"/>
                             </StackLayout>
                         </Frame>

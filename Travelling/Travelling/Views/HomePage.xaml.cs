@@ -67,9 +67,5 @@ namespace Travelling.Views
             stack.Children.Add(rankingPage);
         }
 
-        private void Button_Clicked_4(object sender, EventArgs e)
-        {
-
-        }
     }
 }
