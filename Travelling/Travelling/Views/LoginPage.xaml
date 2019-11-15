@@ -67,9 +67,9 @@
         </StackLayout>
         -->
         
-        <ff:CachedImage Source="loginbg.png"/>
+        <ff:CachedImage Source="loginbg.jpg"/>
         <Button WidthRequest="220" HeightRequest="50" CornerRadius="25" TextColor="White"
-                HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Margin="0,270,0,0" FontFamily="SIMYOU" FontSize="Title"
+                HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Margin="0,405,0,0" FontFamily="SIMYOU" FontSize="Title"
                 BackgroundColor="Transparent" BorderColor="Transparent" BorderWidth="2" Clicked="LoginButton_Clicked"/>
         
     </Grid>
